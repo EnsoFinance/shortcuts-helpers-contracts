@@ -57,6 +57,16 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   });
 
   await deployTupleHelpers();
+
+  const {deploy: deployDecimalHelpers} = await deterministic('DecimalHelpers', {
+    from: deployer,
+    args: [],
+    log: true,
+    autoMine: true,
+    skipIfAlreadyDeployed: true,
+  });
+
+  await deployDecimalHelpers();
 };
 export default func;
 func.tags = ['Helpers'];
