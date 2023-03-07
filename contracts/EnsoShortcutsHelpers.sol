@@ -8,7 +8,7 @@ pragma solidity ^0.8.16;
  * that usually would be read between transactions
  */
 contract EnsoShortcutsHelpers {
-    uint256 public constant VERSION = 2;
+    uint256 public constant VERSION = 3;
 
     /**
      * @dev Returns the ether balance of given `balanceAddress`.
@@ -22,6 +22,13 @@ contract EnsoShortcutsHelpers {
      */
     function getBlockTimestamp() external view returns (uint256 timestamp) {
         return block.timestamp;
+    }
+
+    /**
+     * @dev Reverts depending on a truth condition
+     */
+    function check(bool condition) external pure {
+        if (!condition) revert("Condition not met");
     }
 
     /**
