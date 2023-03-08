@@ -12,7 +12,7 @@ describe('EnsoHelpers', async () => {
     });
 
     it('has VERSION', async () => {
-      const currentVersion = 2n;
+      const currentVersion = 3n;
       expect(await ensoShortcutsHelpers.VERSION()).to.eq(currentVersion);
     });
 
@@ -25,6 +25,16 @@ describe('EnsoHelpers', async () => {
       expect(await ensoShortcutsHelpers.getBlockTimestamp()).to.eq(
         (await ethers.provider.getBlock('latest')).timestamp
       );
+    });
+
+    it('check truth condition', async () => {
+      const {deployer: testAddress} = await getNamedAccounts();
+      const balance = await ensoShortcutsHelpers.getBalance(testAddress);
+      const condition = await ensoShortcutsHelpers.isGreaterThan(balance, 0);
+      expect(condition).to.eq(true);
+      const inverse = await ensoShortcutsHelpers.not(condition);
+      expect(inverse).to.eq(false);
+      await expect(ensoShortcutsHelpers.check(inverse)).to.be.revertedWith('Condition not met');
     });
 
     it('bytesToString', async () => {
