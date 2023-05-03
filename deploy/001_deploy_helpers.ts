@@ -67,6 +67,16 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   });
 
   await deployDecimalHelpers();
+
+  const {deploy: deployBalancerHelpers} = await deterministic('BalancerHelpers', {
+    from: deployer,
+    args: [],
+    log: true,
+    autoMine: true,
+    skipIfAlreadyDeployed: true,
+  });
+
+  await deployBalancerHelpers();
 };
 export default func;
 func.tags = ['Helpers'];
