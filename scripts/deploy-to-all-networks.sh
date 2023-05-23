@@ -1,8 +1,10 @@
 #!/bin/bash
 set -o allexport
-source ../.env
+source .env
 
 echo "Deploy to all networks" \
     && yarn deploy polygon \
     && yarn deploy arbitrum \
-    && yarn deploy mainnet
+    && yarn deploy optimism \
+    && yarn deploy bsc \
+    && yarn deploy gnosis

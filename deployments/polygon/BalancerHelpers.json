@@ -1,0 +1,62 @@
+{
+  "address": "0x787576fB520bD30a3f2e04A82Ca0c27C021EA7e9",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "VERSION",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "amounts",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "minimumBPT",
+          "type": "uint256"
+        }
+      ],
+      "name": "encodeExactTokensJoin",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "009d65564428c06693a65175c2da98b3",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"VERSION\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256\",\"name\":\"minimumBPT\",\"type\":\"uint256\"}],\"name\":\"encodeExactTokensJoin\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/BalancerHelpers.sol\":\"BalancerHelpers\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100000000},\"remappings\":[]},\"sources\":{\"contracts/BalancerHelpers.sol\":{\"content\":\"pragma solidity ^0.8.16;\\ncontract BalancerHelpers {\\n\\n    uint256 public constant VERSION = 1;\\n\\n    function encodeExactTokensJoin(uint256[] memory amounts, uint256 minimumBPT)\\n        public \\n        pure\\n        returns (bytes memory)\\n    {\\n        uint256 joinKind = 1; // EXACT TOKENS JOIN\\n        return abi.encode(joinKind, amounts, minimumBPT);\\n    }\\n}\\n\",\"keccak256\":\"0x9cc54ea0d2c10f321c62188311de687faf034ec347defbd736053c6ca15e8d76\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506102b7806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80630aab345e1461003b578063ffa1ad7414610064575b600080fd5b61004e6100493660046100dc565b61007a565b60405161005b91906101be565b60405180910390f35b61006c600181565b60405190815260200161005b565b6040516060906001906100959082908690869060200161022a565b60405160208183030381529060405291505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b600080604083850312156100ef57600080fd5b823567ffffffffffffffff8082111561010757600080fd5b818501915085601f83011261011b57600080fd5b813560208282111561012f5761012f6100ad565b8160051b6040517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0603f83011681018181108682111715610172576101726100ad565b60405292835281830193508481018201928984111561019057600080fd5b948201945b838610156101ae57853585529482019493820193610195565b9997909101359750505050505050565b600060208083528351808285015260005b818110156101eb578581018301518582016040015282016101cf565b5060006040828601015260407fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f8301168501019250505092915050565b6000606082018583526020606081850152818651808452608086019150828801935060005b8181101561026b5784518352938301939183019160010161024f565b505080935050505082604083015294935050505056fea2646970667358221220b0be01b04cba089a4b27d237768504abfdd5473ab324b8f3b7d513485354578d64736f6c63430008100033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80630aab345e1461003b578063ffa1ad7414610064575b600080fd5b61004e6100493660046100dc565b61007a565b60405161005b91906101be565b60405180910390f35b61006c600181565b60405190815260200161005b565b6040516060906001906100959082908690869060200161022a565b60405160208183030381529060405291505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b600080604083850312156100ef57600080fd5b823567ffffffffffffffff8082111561010757600080fd5b818501915085601f83011261011b57600080fd5b813560208282111561012f5761012f6100ad565b8160051b6040517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0603f83011681018181108682111715610172576101726100ad565b60405292835281830193508481018201928984111561019057600080fd5b948201945b838610156101ae57853585529482019493820193610195565b9997909101359750505050505050565b600060208083528351808285015260005b818110156101eb578581018301518582016040015282016101cf565b5060006040828601015260407fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f8301168501019250505092915050565b6000606082018583526020606081850152818651808452608086019150828801935060005b8181101561026b5784518352938301939183019160010161024f565b505080935050505082604083015294935050505056fea2646970667358221220b0be01b04cba089a4b27d237768504abfdd5473ab324b8f3b7d513485354578d64736f6c63430008100033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

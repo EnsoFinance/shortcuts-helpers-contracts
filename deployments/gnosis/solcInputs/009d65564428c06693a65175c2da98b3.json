@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/BalancerHelpers.sol": {
+      "content": "pragma solidity ^0.8.16;\ncontract BalancerHelpers {\n\n    uint256 public constant VERSION = 1;\n\n    function encodeExactTokensJoin(uint256[] memory amounts, uint256 minimumBPT)\n        public \n        pure\n        returns (bytes memory)\n    {\n        uint256 joinKind = 1; // EXACT TOKENS JOIN\n        return abi.encode(joinKind, amounts, minimumBPT);\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 100000000
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
