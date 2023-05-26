@@ -25,7 +25,19 @@ describe('EnsoHelpers', async () => {
       const userData = [joinKind, amounts, minAmountOut];
       const encodedUserData = utils.defaultAbiCoder.encode(userDataABI, userData);
 
-      expect(await balancerHelpers.encodeExactTokensJoin(amounts, minAmountOut)).to.eq(encodedUserData);
+      expect(await balancerHelpers.encodeDataForJoinKindOne(joinKind, amounts, minAmountOut)).to.eq(encodedUserData);
+    });
+
+    it('encode exact token exit', async () => {
+      const exitKind = 0;
+      const amount = 100000000;
+      const tokenIndex = 0;
+
+      const userDataABI = ['uint256', 'uint256', 'uint256'];
+      const userData = [exitKind, amount, tokenIndex];
+      const encodedUserData = utils.defaultAbiCoder.encode(userDataABI, userData);
+
+      expect(await balancerHelpers.encodeDataForExitKindZero(exitKind, amount, tokenIndex)).to.eq(encodedUserData);
     });
   });
 });
