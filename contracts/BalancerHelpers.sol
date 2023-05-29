@@ -5,7 +5,7 @@ pragma solidity ^0.8.16;
  */
 
 contract BalancerHelpers {
-    uint256 public constant VERSION = 1;
+    uint256 public constant VERSION = 2;
 
     function encodeDataForJoinKindOne(uint256 joinKind, uint256[] memory amounts, uint256 minimumBPT)
         public
