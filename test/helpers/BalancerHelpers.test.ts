@@ -12,7 +12,7 @@ describe('EnsoHelpers', async () => {
     });
 
     it('has VERSION', async () => {
-      const currentVersion = 1n;
+      const currentVersion = 2n;
       expect(await balancerHelpers.VERSION()).to.eq(currentVersion);
     });
 
