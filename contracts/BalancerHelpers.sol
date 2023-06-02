@@ -20,7 +20,6 @@ contract BalancerHelpers {
         pure
         returns (bytes memory)
     {
-
         return abi.encode(exitKind, amount, tokenIndex);
     }
 }

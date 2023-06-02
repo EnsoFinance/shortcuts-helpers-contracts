@@ -5,7 +5,7 @@
       "chainId": "1",
       "contracts": {
         "BalancerHelpers": {
-          "address": "0x787576fB520bD30a3f2e04A82Ca0c27C021EA7e9",
+          "address": "0x4b6959658aBAa91121bEd0bf07fd35080276e47e",
           "abi": [
             {
               "inputs": [],
@@ -23,6 +23,40 @@
             {
               "inputs": [
                 {
+                  "internalType": "uint256",
+                  "name": "exitKind",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "encodeDataForExitKindZero",
+              "outputs": [
+                {
+                  "internalType": "bytes",
+                  "name": "",
+                  "type": "bytes"
+                }
+              ],
+              "stateMutability": "pure",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "joinKind",
+                  "type": "uint256"
+                },
+                {
                   "internalType": "uint256[]",
                   "name": "amounts",
                   "type": "uint256[]"
@@ -33,7 +67,7 @@
                   "type": "uint256"
                 }
               ],
-              "name": "encodeExactTokensJoin",
+              "name": "encodeDataForJoinKindOne",
               "outputs": [
                 {
                   "internalType": "bytes",
@@ -1198,7 +1232,7 @@
       "chainId": "10",
       "contracts": {
         "BalancerHelpers": {
-          "address": "0x787576fB520bD30a3f2e04A82Ca0c27C021EA7e9",
+          "address": "0x4b6959658aBAa91121bEd0bf07fd35080276e47e",
           "abi": [
             {
               "inputs": [],
@@ -1216,6 +1250,40 @@
             {
               "inputs": [
                 {
+                  "internalType": "uint256",
+                  "name": "exitKind",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "encodeDataForExitKindZero",
+              "outputs": [
+                {
+                  "internalType": "bytes",
+                  "name": "",
+                  "type": "bytes"
+                }
+              ],
+              "stateMutability": "pure",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "joinKind",
+                  "type": "uint256"
+                },
+                {
                   "internalType": "uint256[]",
                   "name": "amounts",
                   "type": "uint256[]"
@@ -1226,7 +1294,7 @@
                   "type": "uint256"
                 }
               ],
-              "name": "encodeExactTokensJoin",
+              "name": "encodeDataForJoinKindOne",
               "outputs": [
                 {
                   "internalType": "bytes",
@@ -2391,7 +2459,7 @@
       "chainId": "56",
       "contracts": {
         "BalancerHelpers": {
-          "address": "0x787576fB520bD30a3f2e04A82Ca0c27C021EA7e9",
+          "address": "0x4b6959658aBAa91121bEd0bf07fd35080276e47e",
           "abi": [
             {
               "inputs": [],
@@ -2409,6 +2477,40 @@
             {
               "inputs": [
                 {
+                  "internalType": "uint256",
+                  "name": "exitKind",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "encodeDataForExitKindZero",
+              "outputs": [
+                {
+                  "internalType": "bytes",
+                  "name": "",
+                  "type": "bytes"
+                }
+              ],
+              "stateMutability": "pure",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "joinKind",
+                  "type": "uint256"
+                },
+                {
                   "internalType": "uint256[]",
                   "name": "amounts",
                   "type": "uint256[]"
@@ -2419,7 +2521,7 @@
                   "type": "uint256"
                 }
               ],
-              "name": "encodeExactTokensJoin",
+              "name": "encodeDataForJoinKindOne",
               "outputs": [
                 {
                   "internalType": "bytes",
@@ -3583,6 +3685,129 @@
       "name": "gnosis",
       "chainId": "100",
       "contracts": {
+        "BalancerHelpers": {
+          "address": "0x4b6959658aBAa91121bEd0bf07fd35080276e47e",
+          "abi": [
+            {
+              "inputs": [],
+              "name": "VERSION",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "exitKind",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "encodeDataForExitKindZero",
+              "outputs": [
+                {
+                  "internalType": "bytes",
+                  "name": "",
+                  "type": "bytes"
+                }
+              ],
+              "stateMutability": "pure",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "joinKind",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256[]",
+                  "name": "amounts",
+                  "type": "uint256[]"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "minimumBPT",
+                  "type": "uint256"
+                }
+              ],
+              "name": "encodeDataForJoinKindOne",
+              "outputs": [
+                {
+                  "internalType": "bytes",
+                  "name": "",
+                  "type": "bytes"
+                }
+              ],
+              "stateMutability": "pure",
+              "type": "function"
+            }
+          ]
+        },
+        "DecimalHelpers": {
+          "address": "0xbb3Da51e49FA7d697e550B1B495A06cdBD47E661",
+          "abi": [
+            {
+              "inputs": [],
+              "name": "VERSION",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "number",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint8",
+                  "name": "decimals",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isPercent",
+                  "type": "bool"
+                }
+              ],
+              "name": "decimalString",
+              "outputs": [
+                {
+                  "internalType": "string",
+                  "name": "",
+                  "type": "string"
+                }
+              ],
+              "stateMutability": "pure",
+              "type": "function"
+            }
+          ]
+        },
         "EnsoShortcutsHelpers": {
           "address": "0x7E7d64D987cAb6EeD08A191C4C2459dAF2f8ED0B",
           "abi": [
@@ -4215,6 +4440,72 @@
             }
           ]
         },
+        "PercentageMathHelpers": {
+          "address": "0xD0aF6F692bFa10d6a535A3A321Dc8377F4EeEF12",
+          "abi": [
+            {
+              "inputs": [],
+              "name": "VERSION",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "value",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "percentage",
+                  "type": "uint256"
+                }
+              ],
+              "name": "percentDiv",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "pure",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "value",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "percentage",
+                  "type": "uint256"
+                }
+              ],
+              "name": "percentMul",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "pure",
+              "type": "function"
+            }
+          ]
+        },
         "SignedMathHelpers": {
           "address": "0x67d753CB8f48Ebd1E77c21E110aF870B4117DD7D",
           "abi": [
@@ -4454,72 +4745,6 @@
             }
           ]
         },
-        "PercentageMathHelpers": {
-          "address": "0xD0aF6F692bFa10d6a535A3A321Dc8377F4EeEF12",
-          "abi": [
-            {
-              "inputs": [],
-              "name": "VERSION",
-              "outputs": [
-                {
-                  "internalType": "uint256",
-                  "name": "",
-                  "type": "uint256"
-                }
-              ],
-              "stateMutability": "view",
-              "type": "function"
-            },
-            {
-              "inputs": [
-                {
-                  "internalType": "uint256",
-                  "name": "value",
-                  "type": "uint256"
-                },
-                {
-                  "internalType": "uint256",
-                  "name": "percentage",
-                  "type": "uint256"
-                }
-              ],
-              "name": "percentDiv",
-              "outputs": [
-                {
-                  "internalType": "uint256",
-                  "name": "",
-                  "type": "uint256"
-                }
-              ],
-              "stateMutability": "pure",
-              "type": "function"
-            },
-            {
-              "inputs": [
-                {
-                  "internalType": "uint256",
-                  "name": "value",
-                  "type": "uint256"
-                },
-                {
-                  "internalType": "uint256",
-                  "name": "percentage",
-                  "type": "uint256"
-                }
-              ],
-              "name": "percentMul",
-              "outputs": [
-                {
-                  "internalType": "uint256",
-                  "name": "",
-                  "type": "uint256"
-                }
-              ],
-              "stateMutability": "pure",
-              "type": "function"
-            }
-          ]
-        },
         "TupleHelpers": {
           "address": "0x6675a323dEDb77822FCf39eAa9D682F6Abe72555",
           "abi": [
@@ -4678,95 +4903,6 @@
               "type": "function"
             }
           ]
-        },
-        "DecimalHelpers": {
-          "address": "0xbb3Da51e49FA7d697e550B1B495A06cdBD47E661",
-          "abi": [
-            {
-              "inputs": [],
-              "name": "VERSION",
-              "outputs": [
-                {
-                  "internalType": "uint256",
-                  "name": "",
-                  "type": "uint256"
-                }
-              ],
-              "stateMutability": "view",
-              "type": "function"
-            },
-            {
-              "inputs": [
-                {
-                  "internalType": "uint256",
-                  "name": "number",
-                  "type": "uint256"
-                },
-                {
-                  "internalType": "uint8",
-                  "name": "decimals",
-                  "type": "uint8"
-                },
-                {
-                  "internalType": "bool",
-                  "name": "isPercent",
-                  "type": "bool"
-                }
-              ],
-              "name": "decimalString",
-              "outputs": [
-                {
-                  "internalType": "string",
-                  "name": "",
-                  "type": "string"
-                }
-              ],
-              "stateMutability": "pure",
-              "type": "function"
-            }
-          ]
-        },
-        "BalancerHelpers": {
-          "address": "0x787576fB520bD30a3f2e04A82Ca0c27C021EA7e9",
-          "abi": [
-            {
-              "inputs": [],
-              "name": "VERSION",
-              "outputs": [
-                {
-                  "internalType": "uint256",
-                  "name": "",
-                  "type": "uint256"
-                }
-              ],
-              "stateMutability": "view",
-              "type": "function"
-            },
-            {
-              "inputs": [
-                {
-                  "internalType": "uint256[]",
-                  "name": "amounts",
-                  "type": "uint256[]"
-                },
-                {
-                  "internalType": "uint256",
-                  "name": "minimumBPT",
-                  "type": "uint256"
-                }
-              ],
-              "name": "encodeExactTokensJoin",
-              "outputs": [
-                {
-                  "internalType": "bytes",
-                  "name": "",
-                  "type": "bytes"
-                }
-              ],
-              "stateMutability": "pure",
-              "type": "function"
-            }
-          ]
         }
       }
     }
@@ -4777,7 +4913,7 @@
       "chainId": "137",
       "contracts": {
         "BalancerHelpers": {
-          "address": "0x787576fB520bD30a3f2e04A82Ca0c27C021EA7e9",
+          "address": "0x4b6959658aBAa91121bEd0bf07fd35080276e47e",
           "abi": [
             {
               "inputs": [],
@@ -4795,6 +4931,40 @@
             {
               "inputs": [
                 {
+                  "internalType": "uint256",
+                  "name": "exitKind",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "encodeDataForExitKindZero",
+              "outputs": [
+                {
+                  "internalType": "bytes",
+                  "name": "",
+                  "type": "bytes"
+                }
+              ],
+              "stateMutability": "pure",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "joinKind",
+                  "type": "uint256"
+                },
+                {
                   "internalType": "uint256[]",
                   "name": "amounts",
                   "type": "uint256[]"
@@ -4805,7 +4975,7 @@
                   "type": "uint256"
                 }
               ],
-              "name": "encodeExactTokensJoin",
+              "name": "encodeDataForJoinKindOne",
               "outputs": [
                 {
                   "internalType": "bytes",
@@ -5970,7 +6140,7 @@
       "chainId": "42161",
       "contracts": {
         "BalancerHelpers": {
-          "address": "0x787576fB520bD30a3f2e04A82Ca0c27C021EA7e9",
+          "address": "0x4b6959658aBAa91121bEd0bf07fd35080276e47e",
           "abi": [
             {
               "inputs": [],
@@ -5988,6 +6158,40 @@
             {
               "inputs": [
                 {
+                  "internalType": "uint256",
+                  "name": "exitKind",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "encodeDataForExitKindZero",
+              "outputs": [
+                {
+                  "internalType": "bytes",
+                  "name": "",
+                  "type": "bytes"
+                }
+              ],
+              "stateMutability": "pure",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "joinKind",
+                  "type": "uint256"
+                },
+                {
                   "internalType": "uint256[]",
                   "name": "amounts",
                   "type": "uint256[]"
@@ -5998,7 +6202,7 @@
                   "type": "uint256"
                 }
               ],
-              "name": "encodeExactTokensJoin",
+              "name": "encodeDataForJoinKindOne",
               "outputs": [
                 {
                   "internalType": "bytes",
