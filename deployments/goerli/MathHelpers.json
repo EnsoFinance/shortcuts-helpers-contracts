@@ -1,0 +1,309 @@
+{
+  "address": "0xCA99eAa38e8F37a168214a3A57c9a45a58563ED5",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "VERSION",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "a",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "b",
+          "type": "uint256"
+        }
+      ],
+      "name": "add",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "a",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "b",
+          "type": "uint256"
+        }
+      ],
+      "name": "average",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "condition",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes4",
+          "name": "method",
+          "type": "bytes4"
+        },
+        {
+          "internalType": "uint256",
+          "name": "a",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "b",
+          "type": "uint256"
+        }
+      ],
+      "name": "conditional",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "a",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "b",
+          "type": "uint256"
+        }
+      ],
+      "name": "div",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "a",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "b",
+          "type": "uint256"
+        }
+      ],
+      "name": "max",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "a",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "b",
+          "type": "uint256"
+        }
+      ],
+      "name": "min",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "a",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "b",
+          "type": "uint256"
+        }
+      ],
+      "name": "mod",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "a",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "b",
+          "type": "uint256"
+        }
+      ],
+      "name": "mul",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "a",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "b",
+          "type": "uint256"
+        }
+      ],
+      "name": "sub",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x8650a8b26d5981b863cb2acc32244149d682bcf14fb0572f998a6e85a17e51b7",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0x826e0BB2276271eFdF2a500597f37b94f6c153bA",
+    "contractAddress": null,
+    "transactionIndex": 5,
+    "gasUsed": "330036",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xe12d60dedffe6aa3e04c463005d986cc02df55b2e65416a5580f578638540efb",
+    "transactionHash": "0x8650a8b26d5981b863cb2acc32244149d682bcf14fb0572f998a6e85a17e51b7",
+    "logs": [],
+    "blockNumber": 9518917,
+    "cumulativeGasUsed": "534614",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "bcb0d2b3056dea4137ec031d5f6482e4",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"VERSION\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"add\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"average\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"condition\",\"type\":\"bool\"},{\"internalType\":\"bytes4\",\"name\":\"method\",\"type\":\"bytes4\"},{\"internalType\":\"uint256\",\"name\":\"a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"conditional\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"div\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"max\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"min\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"mod\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"mul\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"sub\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"MathHelpers contract is recommended to use only in Shortcuts passed to EnsoWallet Based on OpenZepplin Contracts v4.7.3: - utils/math/Math.sol (https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/Math.sol) - utils/math/SafeMath.sol (https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol)\",\"kind\":\"dev\",\"methods\":{\"add(uint256,uint256)\":{\"details\":\"Returns the addition of two unsigned integers, reverting on overflow. Counterpart to Solidity's `+` operator. Requirements: - Addition cannot overflow.\"},\"average(uint256,uint256)\":{\"details\":\"Returns the average of two numbers. The result is rounded towards zero.\"},\"conditional(bool,bytes4,uint256,uint256)\":{\"details\":\"Returns the results a math operation if a condition is met. Otherwise returns the 'a' value without any modification.\"},\"div(uint256,uint256)\":{\"details\":\"Returns the integer division of two unsigned integers, reverting on division by zero. The result is rounded towards zero. Counterpart to Solidity's `/` operator. Requirements: - The divisor cannot be zero.\"},\"max(uint256,uint256)\":{\"details\":\"Returns the largest of two numbers.\"},\"min(uint256,uint256)\":{\"details\":\"Returns the smallest of two numbers.\"},\"mod(uint256,uint256)\":{\"details\":\"Returns the remainder of dividing two unsigned integers. (unsigned integer modulo), reverting when dividing by zero. Counterpart to Solidity's `%` operator. This function uses a `revert` opcode (which leaves remaining gas untouched) while Solidity uses an invalid opcode to revert (consuming all remaining gas). Requirements: - The divisor cannot be zero.\"},\"mul(uint256,uint256)\":{\"details\":\"Returns the multiplication of two unsigned integers, reverting on overflow. Counterpart to Solidity's `*` operator. Requirements: - Multiplication cannot overflow.\"},\"sub(uint256,uint256)\":{\"details\":\"Returns the subtraction of two unsigned integers, reverting on overflow (when the result is negative). Counterpart to Solidity's `-` operator. Requirements: - Subtraction cannot overflow.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/MathHelpers.sol\":\"MathHelpers\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100000000},\"remappings\":[]},\"sources\":{\"contracts/MathHelpers.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.16;\\n\\n/**\\n * @dev MathHelpers contract is recommended to use only in Shortcuts passed to EnsoWallet\\n *\\n * Based on OpenZepplin Contracts v4.7.3:\\n * - utils/math/Math.sol (https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/Math.sol)\\n * - utils/math/SafeMath.sol (https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol)\\n */\\ncontract MathHelpers {\\n    uint256 public constant VERSION = 1;\\n\\n    /**\\n     * @dev Returns the largest of two numbers.\\n     */\\n    function max(uint256 a, uint256 b) external pure returns (uint256) {\\n        return a >= b ? a : b;\\n    }\\n\\n    /**\\n     * @dev Returns the smallest of two numbers.\\n     */\\n    function min(uint256 a, uint256 b) external pure returns (uint256) {\\n        return a < b ? a : b;\\n    }\\n\\n    /**\\n     * @dev Returns the average of two numbers. The result is rounded towards\\n     * zero.\\n     */\\n    function average(uint256 a, uint256 b) external pure returns (uint256) {\\n        return (a & b) + (a ^ b) / 2;\\n    }\\n\\n    /**\\n     * @dev Returns the addition of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `+` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Addition cannot overflow.\\n     */\\n    function add(uint256 a, uint256 b) external pure returns (uint256) {\\n        return a + b;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b) external pure returns (uint256) {\\n        return a - b;\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `*` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Multiplication cannot overflow.\\n     */\\n    function mul(uint256 a, uint256 b) external pure returns (uint256) {\\n        return a * b;\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers, reverting on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b) external pure returns (uint256) {\\n        return a / b;\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * reverting when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b) external pure returns (uint256) {\\n        return a % b;\\n    }\\n\\n    /**\\n     * @dev Returns the results a math operation if a condition is met. Otherwise returns the 'a' value without any modification.\\n     */\\n    function conditional(bool condition, bytes4 method, uint256 a, uint256 b) external view returns (uint256) {\\n        if (condition) {\\n            (bool success, bytes memory n) = address(this).staticcall(abi.encodeWithSelector(method, a, b));\\n            if (success) return abi.decode(n, (uint256));\\n        }\\n        return a;\\n    }\\n}\\n\",\"keccak256\":\"0x1e8f95e33e7030141801f035376a784a59e6821a43bf8d218cd74f91d9ecc705\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610505806100206000396000f3fe608060405234801561001057600080fd5b50600436106100be5760003560e01c8063b67d77c511610076578063cf698e3d1161005b578063cf698e3d1461015a578063f43f523a1461016d578063ffa1ad741461018057600080fd5b8063b67d77c514610134578063c8a4ac9c1461014757600080fd5b8063771602f7116100a7578063771602f7146100fb5780637ae2b5c71461010e578063a391c15b1461012157600080fd5b80632b7423ab146100c35780636d5433e6146100e8575b600080fd5b6100d66100d136600461030c565b610188565b60405190815260200160405180910390f35b6100d66100f636600461030c565b6101ac565b6100d661010936600461030c565b6101c3565b6100d661011c36600461030c565b6101cf565b6100d661012f36600461030c565b6101de565b6100d661014236600461030c565b6101ea565b6100d661015536600461030c565b6101f6565b6100d661016836600461032e565b610202565b6100d661017b36600461030c565b610300565b6100d6600181565b600061019760028484186103fc565b6101a390848416610410565b90505b92915050565b6000818310156101bc57816101a3565b5090919050565b60006101a38284610410565b60008183106101bc57816101a3565b60006101a382846103fc565b60006101a38284610423565b60006101a38284610436565b600084156102f5576040805160248101859052604480820185905282518083039091018152606490910182526020810180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff167fffffffff00000000000000000000000000000000000000000000000000000000881617905290516000918291309161028a91610473565b600060405180830381855afa9150503d80600081146102c5576040519150601f19603f3d011682016040523d82523d6000602084013e6102ca565b606091505b509150915081156102f257808060200190518101906102e991906104a2565b925050506102f8565b50505b50815b949350505050565b60006101a382846104bb565b6000806040838503121561031f57600080fd5b50508035926020909101359150565b6000806000806080858703121561034457600080fd5b8435801515811461035457600080fd5b935060208501357fffffffff000000000000000000000000000000000000000000000000000000008116811461038957600080fd5b93969395505050506040820135916060013590565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60008261040b5761040b61039e565b500490565b808201808211156101a6576101a66103cd565b818103818111156101a6576101a66103cd565b6000817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff048311821515161561046e5761046e6103cd565b500290565b6000825160005b81811015610494576020818601810151858301520161047a565b506000920191825250919050565b6000602082840312156104b457600080fd5b5051919050565b6000826104ca576104ca61039e565b50069056fea2646970667358221220f5a740670d70934ad534add4d999c74dd045d96f2ca4a2ed3890243a794cd0e564736f6c63430008100033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100be5760003560e01c8063b67d77c511610076578063cf698e3d1161005b578063cf698e3d1461015a578063f43f523a1461016d578063ffa1ad741461018057600080fd5b8063b67d77c514610134578063c8a4ac9c1461014757600080fd5b8063771602f7116100a7578063771602f7146100fb5780637ae2b5c71461010e578063a391c15b1461012157600080fd5b80632b7423ab146100c35780636d5433e6146100e8575b600080fd5b6100d66100d136600461030c565b610188565b60405190815260200160405180910390f35b6100d66100f636600461030c565b6101ac565b6100d661010936600461030c565b6101c3565b6100d661011c36600461030c565b6101cf565b6100d661012f36600461030c565b6101de565b6100d661014236600461030c565b6101ea565b6100d661015536600461030c565b6101f6565b6100d661016836600461032e565b610202565b6100d661017b36600461030c565b610300565b6100d6600181565b600061019760028484186103fc565b6101a390848416610410565b90505b92915050565b6000818310156101bc57816101a3565b5090919050565b60006101a38284610410565b60008183106101bc57816101a3565b60006101a382846103fc565b60006101a38284610423565b60006101a38284610436565b600084156102f5576040805160248101859052604480820185905282518083039091018152606490910182526020810180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff167fffffffff00000000000000000000000000000000000000000000000000000000881617905290516000918291309161028a91610473565b600060405180830381855afa9150503d80600081146102c5576040519150601f19603f3d011682016040523d82523d6000602084013e6102ca565b606091505b509150915081156102f257808060200190518101906102e991906104a2565b925050506102f8565b50505b50815b949350505050565b60006101a382846104bb565b6000806040838503121561031f57600080fd5b50508035926020909101359150565b6000806000806080858703121561034457600080fd5b8435801515811461035457600080fd5b935060208501357fffffffff000000000000000000000000000000000000000000000000000000008116811461038957600080fd5b93969395505050506040820135916060013590565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60008261040b5761040b61039e565b500490565b808201808211156101a6576101a66103cd565b818103818111156101a6576101a66103cd565b6000817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff048311821515161561046e5761046e6103cd565b500290565b6000825160005b81811015610494576020818601810151858301520161047a565b506000920191825250919050565b6000602082840312156104b457600080fd5b5051919050565b6000826104ca576104ca61039e565b50069056fea2646970667358221220f5a740670d70934ad534add4d999c74dd045d96f2ca4a2ed3890243a794cd0e564736f6c63430008100033",
+  "devdoc": {
+    "details": "MathHelpers contract is recommended to use only in Shortcuts passed to EnsoWallet Based on OpenZepplin Contracts v4.7.3: - utils/math/Math.sol (https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/Math.sol) - utils/math/SafeMath.sol (https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol)",
+    "kind": "dev",
+    "methods": {
+      "add(uint256,uint256)": {
+        "details": "Returns the addition of two unsigned integers, reverting on overflow. Counterpart to Solidity's `+` operator. Requirements: - Addition cannot overflow."
+      },
+      "average(uint256,uint256)": {
+        "details": "Returns the average of two numbers. The result is rounded towards zero."
+      },
+      "conditional(bool,bytes4,uint256,uint256)": {
+        "details": "Returns the results a math operation if a condition is met. Otherwise returns the 'a' value without any modification."
+      },
+      "div(uint256,uint256)": {
+        "details": "Returns the integer division of two unsigned integers, reverting on division by zero. The result is rounded towards zero. Counterpart to Solidity's `/` operator. Requirements: - The divisor cannot be zero."
+      },
+      "max(uint256,uint256)": {
+        "details": "Returns the largest of two numbers."
+      },
+      "min(uint256,uint256)": {
+        "details": "Returns the smallest of two numbers."
+      },
+      "mod(uint256,uint256)": {
+        "details": "Returns the remainder of dividing two unsigned integers. (unsigned integer modulo), reverting when dividing by zero. Counterpart to Solidity's `%` operator. This function uses a `revert` opcode (which leaves remaining gas untouched) while Solidity uses an invalid opcode to revert (consuming all remaining gas). Requirements: - The divisor cannot be zero."
+      },
+      "mul(uint256,uint256)": {
+        "details": "Returns the multiplication of two unsigned integers, reverting on overflow. Counterpart to Solidity's `*` operator. Requirements: - Multiplication cannot overflow."
+      },
+      "sub(uint256,uint256)": {
+        "details": "Returns the subtraction of two unsigned integers, reverting on overflow (when the result is negative). Counterpart to Solidity's `-` operator. Requirements: - Subtraction cannot overflow."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
