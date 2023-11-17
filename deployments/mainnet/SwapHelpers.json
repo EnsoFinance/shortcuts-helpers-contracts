@@ -1,0 +1,84 @@
+{
+  "address": "0xe674FC4694e6B74464C14a625f350880B09c6a01",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "VERSION",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "insertAmount",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x3f215ad16f837f775e1555fa65d7097515b28fce5f7f54cf38c4a70ecc592d0c",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0x826e0BB2276271eFdF2a500597f37b94f6c153bA",
+    "contractAddress": null,
+    "transactionIndex": 37,
+    "gasUsed": "175838",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x644808a8fe1c406e3febc71acb1cd617012f666107a8df41498e2477bf0cf7fc",
+    "transactionHash": "0x3f215ad16f837f775e1555fa65d7097515b28fce5f7f54cf38c4a70ecc592d0c",
+    "logs": [],
+    "blockNumber": 18593681,
+    "cumulativeGasUsed": "3753757",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "79d1f8654053a0957a94a0f32e20bdc3",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"VERSION\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"insertAmount\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Helper contract to update swap data on-chain\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/SwapHelpers.sol\":\"SwapHelpers\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100000000},\"remappings\":[]},\"sources\":{\"contracts/SwapHelpers.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.16;\\n\\n/**\\n * @notice Helper contract to update swap data on-chain\\n */\\ncontract SwapHelpers {\\n    uint256 public constant VERSION = 1;\\n\\n    function insertAmount(\\n        bytes memory data,\\n        uint256 index,\\n        uint256 amount\\n    ) external pure returns (bytes memory) {\\n        assembly {\\n            mstore(add(data, add(36, mul(index, 32))), amount)\\n        }\\n        return data;\\n    }\\n}\\n\",\"keccak256\":\"0x1730e4ec373a5c1325f4fbe1f0e6f5236a0553681f2592c79f759fbad56de6cf\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610237806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80636e4c64eb1461003b578063ffa1ad741461006e575b600080fd5b6100586100493660046100b3565b60209190910282016024015290565b6040516100659190610195565b60405180910390f35b610076600181565b604051908152602001610065565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b6000806000606084860312156100c857600080fd5b833567ffffffffffffffff808211156100e057600080fd5b818601915086601f8301126100f457600080fd5b81358181111561010657610106610084565b604051601f82017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0908116603f0116810190838211818310171561014c5761014c610084565b8160405282815289602084870101111561016557600080fd5b82602086016020830137600060208483010152809750505050505060208401359150604084013590509250925092565b600060208083528351808285015260005b818110156101c2578581018301518582016040015282016101a6565b5060006040828601015260407fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f830116850101925050509291505056fea2646970667358221220b62eb7b35f9387e48df2662d159d117ec23d39b10da32ffdf761c1263d75143b64736f6c63430008100033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80636e4c64eb1461003b578063ffa1ad741461006e575b600080fd5b6100586100493660046100b3565b60209190910282016024015290565b6040516100659190610195565b60405180910390f35b610076600181565b604051908152602001610065565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b6000806000606084860312156100c857600080fd5b833567ffffffffffffffff808211156100e057600080fd5b818601915086601f8301126100f457600080fd5b81358181111561010657610106610084565b604051601f82017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0908116603f0116810190838211818310171561014c5761014c610084565b8160405282815289602084870101111561016557600080fd5b82602086016020830137600060208483010152809750505050505060208401359150604084013590509250925092565b600060208083528351808285015260005b818110156101c2578581018301518582016040015282016101a6565b5060006040828601015260407fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f830116850101925050509291505056fea2646970667358221220b62eb7b35f9387e48df2662d159d117ec23d39b10da32ffdf761c1263d75143b64736f6c63430008100033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "Helper contract to update swap data on-chain",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
