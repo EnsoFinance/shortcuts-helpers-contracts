@@ -12,11 +12,21 @@ import {nodeUrl, accounts, addForkConfiguration} from './utils/network';
 
 dotenv.config();
 
+const oldCompiler = {
+  version: "0.8.16",
+  settings: {
+    optimizer: {
+      enabled: true,
+      runs: 100000000,
+    },
+  }
+}
+
 const config: HardhatUserConfig = {
   solidity: {
     compilers: [
       {
-        version: '0.8.16',
+        version: '0.8.23',
         settings: {
           optimizer: {
             enabled: true,
@@ -25,6 +35,15 @@ const config: HardhatUserConfig = {
         },
       },
     ],
+    overrides: {
+      "contracts/BalancerHelpers.sol": oldCompiler,
+      "contracts/DecimalHelpers.sol": oldCompiler,
+      "contracts/EnsoShortcutsHelpers.sol": oldCompiler,
+      "contracts/MathHelpers.sol": oldCompiler,
+      "contracts/PercentageMathHelpers.sol": oldCompiler,
+      "contracts/SignedMathHelpers.sol": oldCompiler,
+      "contracts/TupleHelpers.sol": oldCompiler
+    }
   },
   namedAccounts: {
     deployer: 0,

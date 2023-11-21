@@ -88,7 +88,6 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   await deploySwapHelpers();
 
-  /*
   if (network.name === 'mainnet') {
     const {deploy: deploySommelierHelpers} = await deterministic('SommelierHelpers', {
       from: deployer,
@@ -100,7 +99,6 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   
     await deploySommelierHelpers();
   }
-  */
 };
 export default func;
 func.tags = ['Helpers'];
