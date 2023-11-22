@@ -43,7 +43,7 @@ contract SwapHelpers {
             }
         }
         if (tokenOut == _ETH) {
-            (success, ) = receiver.call{ value: address(this).balance }('0x');
+            (success, ) = receiver.call{ value: address(this).balance }("");
             if (!success) revert TransferFailed(receiver);
         } else {
             tokenOut.safeTransfer(receiver, tokenOut.balanceOf(address(this)));

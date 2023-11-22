@@ -5,7 +5,7 @@
       "chainId": "1",
       "contracts": {
         "BalancerHelpers": {
-          "address": "0x30b601366ca2CA1C686D7c1e4C3C8a012B672322",
+          "address": "0x4b6959658aBAa91121bEd0bf07fd35080276e47e",
           "abi": [
             {
               "inputs": [],
@@ -1128,8 +1128,73 @@
           ]
         },
         "SwapHelpers": {
-          "address": "0xe674FC4694e6B74464C14a625f350880B09c6a01",
+          "address": "0xbF96e1DB7b9C72E217Ba6239647b52dF1BEf58EB",
           "abi": [
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "target",
+                  "type": "address"
+                }
+              ],
+              "name": "AddressEmptyCode",
+              "type": "error"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "account",
+                  "type": "address"
+                }
+              ],
+              "name": "AddressInsufficientBalance",
+              "type": "error"
+            },
+            {
+              "inputs": [],
+              "name": "FailedInnerCall",
+              "type": "error"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "expected",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "actual",
+                  "type": "uint256"
+                }
+              ],
+              "name": "IncorrectValue",
+              "type": "error"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                }
+              ],
+              "name": "SafeERC20FailedOperation",
+              "type": "error"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "receiver",
+                  "type": "address"
+                }
+              ],
+              "name": "TransferFailed",
+              "type": "error"
+            },
             {
               "inputs": [],
               "name": "VERSION",
@@ -1171,6 +1236,59 @@
               ],
               "stateMutability": "pure",
               "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "primary",
+                  "type": "address"
+                },
+                {
+                  "internalType": "contract IERC20",
+                  "name": "tokenIn",
+                  "type": "address"
+                },
+                {
+                  "internalType": "contract IERC20",
+                  "name": "tokenOut",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amountIn",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "receiver",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "index",
+                  "type": "uint256"
+                }
+              ],
+              "name": "swap",
+              "outputs": [
+                {
+                  "internalType": "bytes",
+                  "name": "",
+                  "type": "bytes"
+                }
+              ],
+              "stateMutability": "payable",
+              "type": "function"
+            },
+            {
+              "stateMutability": "payable",
+              "type": "receive"
             }
           ]
         },

@@ -34,6 +34,7 @@ const config: HardhatUserConfig = {
           },
         },
       },
+      oldCompiler,
     ],
     overrides: {
       "contracts/BalancerHelpers.sol": oldCompiler,
