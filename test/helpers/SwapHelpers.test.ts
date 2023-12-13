@@ -38,7 +38,7 @@ describe('EnsoHelpers', async () => {
 
     it('swap from ETH', async () => {
       if (await signer.getChainId() === 1) {
-        let amount = '100000000000000000000';
+        const amount = '100000000000000000000';
         const balanceBefore = await lido.balanceOf(signer.address);
         await swapHelpers.swap(
           '0x1111111254eeb25477b68fb85ed929f73a960582',
