@@ -1,0 +1,124 @@
+{
+  "address": "0xD0aF6F692bFa10d6a535A3A321Dc8377F4EeEF12",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "VERSION",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "percentage",
+          "type": "uint256"
+        }
+      ],
+      "name": "percentDiv",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "percentage",
+          "type": "uint256"
+        }
+      ],
+      "name": "percentMul",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x35d7c4e9e6048bfe483a41535ccd58fec159befd791bc94467bdf1b197a9703e",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0x826e0BB2276271eFdF2a500597f37b94f6c153bA",
+    "contractAddress": null,
+    "transactionIndex": 4,
+    "gasUsed": "269308",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xc7f4341dc70df1601dd86b5e636dbdea156fd2cbdb7b833d1e515bc59df9b5c5",
+    "transactionHash": "0x35d7c4e9e6048bfe483a41535ccd58fec159befd791bc94467bdf1b197a9703e",
+    "logs": [],
+    "blockNumber": 1195869,
+    "cumulativeGasUsed": "397844",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "0ee8bdf2ccdb30347bb582e1522dfa02",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"VERSION\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"percentage\",\"type\":\"uint256\"}],\"name\":\"percentDiv\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"percentage\",\"type\":\"uint256\"}],\"name\":\"percentMul\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"PercentageMath contract is recommended to use only in Shortcuts passed to EnsoWallet Forked from Aave PercentageMath library: - protocol-v2/contracts/protocol/libraries/math/PercentageMath.sol (https://github.com/aave/protocol-v2/blob/ice/mainnet-deployment-03-12-2020/contracts/protocol/libraries/math/PercentageMath.sol)\",\"kind\":\"dev\",\"methods\":{\"percentDiv(uint256,uint256)\":{\"details\":\"Executes a percentage division\",\"params\":{\"percentage\":\"The percentage of the value to be calculated\",\"value\":\"The value of which the percentage needs to be calculated\"},\"returns\":{\"_0\":\"The value divided the percentage*\"}},\"percentMul(uint256,uint256)\":{\"details\":\"Executes a percentage multiplication\",\"params\":{\"percentage\":\"The percentage of the value to be calculated\",\"value\":\"The value of which the percentage needs to be calculated\"},\"returns\":{\"_0\":\"The percentage of value*\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/PercentageMathHelpers.sol\":\"PercentageMathHelpers\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100000000},\"remappings\":[]},\"sources\":{\"contracts/PercentageMathHelpers.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.16;\\n\\n/**\\n * @dev PercentageMath contract is recommended to use only in Shortcuts passed to EnsoWallet\\n *\\n * Forked from Aave PercentageMath library:\\n * - protocol-v2/contracts/protocol/libraries/math/PercentageMath.sol (https://github.com/aave/protocol-v2/blob/ice/mainnet-deployment-03-12-2020/contracts/protocol/libraries/math/PercentageMath.sol)\\n */\\n\\ncontract PercentageMathHelpers {\\n  uint256 public constant VERSION = 1;\\n  uint256 constant PERCENTAGE_FACTOR = 1e4; //percentage plus two decimals\\n  uint256 constant HALF_PERCENT = PERCENTAGE_FACTOR / 2;\\n\\n  /**\\n   * @dev Executes a percentage multiplication\\n   * @param value The value of which the percentage needs to be calculated\\n   * @param percentage The percentage of the value to be calculated\\n   * @return The percentage of value\\n   **/\\n\\n  function percentMul(uint256 value, uint256 percentage) external pure returns (uint256) {\\n    if (value == 0 || percentage == 0) {\\n      return 0;\\n    }\\n\\n    require(\\n      value <= (type(uint256).max - HALF_PERCENT) / percentage, \\\"multiplication overflow\\\"\\n    );\\n\\n    return (value * percentage + HALF_PERCENT) / PERCENTAGE_FACTOR;\\n  }\\n\\n  /**\\n   * @dev Executes a percentage division\\n   * @param value The value of which the percentage needs to be calculated\\n   * @param percentage The percentage of the value to be calculated\\n   * @return The value divided the percentage\\n   **/\\n  function percentDiv(uint256 value, uint256 percentage) external pure returns (uint256) {\\n    require(percentage != 0, \\\"Division by 0\\\");\\n    uint256 halfPercentage = percentage / 2;\\n\\n    require(\\n      value <= (type(uint256).max - halfPercentage) / PERCENTAGE_FACTOR, \\\"multiplication overflow\\\"\\n    );\\n\\n    return (value * PERCENTAGE_FACTOR + halfPercentage) / percentage;\\n  }\\n}\\n\",\"keccak256\":\"0xd226c220628c107e891a8d14f7f1cb81291695cb635174586aa29c2eec912014\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506103ef806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806346c840bb146100465780634bf6a8f01461006b578063ffa1ad741461007e575b600080fd5b6100596100543660046102ca565b610086565b60405190815260200160405180910390f35b6100596100793660046102ca565b6101d2565b610059600181565b6000816000036100f7576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600d60248201527f4469766973696f6e20627920300000000000000000000000000000000000000060448201526064015b60405180910390fd5b600061010460028461031b565b9050612710610133827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff610356565b61013d919061031b565b8411156101a6576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601760248201527f6d756c7469706c69636174696f6e206f766572666c6f7700000000000000000060448201526064016100ee565b82816101b461271087610369565b6101be91906103a6565b6101c8919061031b565b9150505b92915050565b60008215806101df575081155b156101ec575060006101cc565b816101fa600261271061031b565b610224907fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff610356565b61022e919061031b565b831115610297576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601760248201527f6d756c7469706c69636174696f6e206f766572666c6f7700000000000000000060448201526064016100ee565b6127106102a560028261031b565b6102af8486610369565b6102b991906103a6565b6102c3919061031b565b9392505050565b600080604083850312156102dd57600080fd5b50508035926020909101359150565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b600082610351577f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b500490565b818103818111156101cc576101cc6102ec565b6000817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156103a1576103a16102ec565b500290565b808201808211156101cc576101cc6102ec56fea26469706673582212200bccdad71e86bbfc3f0b3dc30e685cb06147bc5a17ed68035b606c5992d6999d64736f6c63430008100033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806346c840bb146100465780634bf6a8f01461006b578063ffa1ad741461007e575b600080fd5b6100596100543660046102ca565b610086565b60405190815260200160405180910390f35b6100596100793660046102ca565b6101d2565b610059600181565b6000816000036100f7576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600d60248201527f4469766973696f6e20627920300000000000000000000000000000000000000060448201526064015b60405180910390fd5b600061010460028461031b565b9050612710610133827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff610356565b61013d919061031b565b8411156101a6576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601760248201527f6d756c7469706c69636174696f6e206f766572666c6f7700000000000000000060448201526064016100ee565b82816101b461271087610369565b6101be91906103a6565b6101c8919061031b565b9150505b92915050565b60008215806101df575081155b156101ec575060006101cc565b816101fa600261271061031b565b610224907fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff610356565b61022e919061031b565b831115610297576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601760248201527f6d756c7469706c69636174696f6e206f766572666c6f7700000000000000000060448201526064016100ee565b6127106102a560028261031b565b6102af8486610369565b6102b991906103a6565b6102c3919061031b565b9392505050565b600080604083850312156102dd57600080fd5b50508035926020909101359150565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b600082610351577f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b500490565b818103818111156101cc576101cc6102ec565b6000817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156103a1576103a16102ec565b500290565b808201808211156101cc576101cc6102ec56fea26469706673582212200bccdad71e86bbfc3f0b3dc30e685cb06147bc5a17ed68035b606c5992d6999d64736f6c63430008100033",
+  "devdoc": {
+    "details": "PercentageMath contract is recommended to use only in Shortcuts passed to EnsoWallet Forked from Aave PercentageMath library: - protocol-v2/contracts/protocol/libraries/math/PercentageMath.sol (https://github.com/aave/protocol-v2/blob/ice/mainnet-deployment-03-12-2020/contracts/protocol/libraries/math/PercentageMath.sol)",
+    "kind": "dev",
+    "methods": {
+      "percentDiv(uint256,uint256)": {
+        "details": "Executes a percentage division",
+        "params": {
+          "percentage": "The percentage of the value to be calculated",
+          "value": "The value of which the percentage needs to be calculated"
+        },
+        "returns": {
+          "_0": "The value divided the percentage*"
+        }
+      },
+      "percentMul(uint256,uint256)": {
+        "details": "Executes a percentage multiplication",
+        "params": {
+          "percentage": "The percentage of the value to be calculated",
+          "value": "The value of which the percentage needs to be calculated"
+        },
+        "returns": {
+          "_0": "The percentage of value*"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

@@ -2,7 +2,7 @@ import {HardhatRuntimeEnvironment} from 'hardhat/types';
 import {DeployFunction} from 'hardhat-deploy/types';
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
-  const {deployments, getNamedAccounts} = hre;
+  const {deployments, network, getNamedAccounts} = hre;
 
   const {deterministic} = deployments;
 
@@ -77,6 +77,30 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   });
 
   await deployBalancerHelpers();
+  
+  const {deploy: deploySwapHelpers} = await deterministic('SwapHelpers', {
+    from: deployer,
+    args: [],
+    log: true,
+    autoMine: true,
+    skipIfAlreadyDeployed: true,
+  });
+
+  await deploySwapHelpers();
+
+  /*
+  if (network.name === 'mainnet') {
+    const {deploy: deploySommelierHelpers} = await deterministic('SommelierHelpers', {
+      from: deployer,
+      args: [],
+      log: true,
+      autoMine: true,
+      skipIfAlreadyDeployed: true,
+    });
+  
+    await deploySommelierHelpers();
+  }
+  */
 };
 export default func;
 func.tags = ['Helpers'];

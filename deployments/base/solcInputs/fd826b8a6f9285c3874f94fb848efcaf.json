@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/BalancerHelpers.sol": {
+      "content": "pragma solidity ^0.8.16;\n\n/**\n * @notice Helper contract to encode Balancer userData\n */\n\ncontract BalancerHelpers {\n    uint256 public constant VERSION = 2;\n\n    function encodeDataForJoinKindOne(uint256 joinKind, uint256[] memory amounts, uint256 minimumBPT)\n        public\n        pure\n        returns (bytes memory)\n    {\n        return abi.encode(joinKind, amounts, minimumBPT);\n    }\n\n     function encodeDataForExitKindZero(uint256 exitKind, uint256 amount, uint256 tokenIndex)\n        public\n        pure\n        returns (bytes memory)\n    {\n        return abi.encode(exitKind, amount, tokenIndex);\n    }\n}"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 100000000
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
