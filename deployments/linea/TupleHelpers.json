@@ -1,0 +1,260 @@
+{
+  "address": "0x6675a323dEDb77822FCf39eAa9D682F6Abe72555",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "tuple",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "extractArray",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "tuple",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "extractDynamicArray",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "tuple",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "extractDynamicElement",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "tuple",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "extractElement",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "tuple",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool[]",
+          "name": "isDynamicTypeFormat",
+          "type": "bool[]"
+        }
+      ],
+      "name": "extractTuple",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "tuple",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool[]",
+          "name": "isDynamicTypeFormat",
+          "type": "bool[]"
+        }
+      ],
+      "name": "extractTupleArray",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xe5266716b417320723a3cf3bd5de1028789a7a271d74165b283109029546f95d",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0x826e0BB2276271eFdF2a500597f37b94f6c153bA",
+    "contractAddress": null,
+    "transactionIndex": 4,
+    "gasUsed": "415384",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xd3ffff56ad16036559dc6ca62a8e40e565cdaa80489dd133ce06974d294996f5",
+    "transactionHash": "0xe5266716b417320723a3cf3bd5de1028789a7a271d74165b283109029546f95d",
+    "logs": [],
+    "blockNumber": 1195871,
+    "cumulativeGasUsed": "1272262",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "7acbc1c35deeb74bdd79c07a0a0233db",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"tuple\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"extractArray\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"tuple\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"extractDynamicArray\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"tuple\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"extractDynamicElement\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"tuple\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"extractElement\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"tuple\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"},{\"internalType\":\"bool[]\",\"name\":\"isDynamicTypeFormat\",\"type\":\"bool[]\"}],\"name\":\"extractTuple\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"tuple\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"},{\"internalType\":\"bool[]\",\"name\":\"isDynamicTypeFormat\",\"type\":\"bool[]\"}],\"name\":\"extractTupleArray\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"extractArray(bytes,uint256)\":{\"details\":\"Use with .rawValue() in the weiroll planner\",\"params\":{\"index\":\"The index of the array to be extracted\",\"tuple\":\"The bytes encoded array\"}},\"extractDynamicArray(bytes,uint256)\":{\"details\":\"Use with .rawValue() in the weiroll planner\",\"params\":{\"index\":\"The index of the dynamic array to be extracted\",\"tuple\":\"The bytes encoded tuple\"}},\"extractDynamicElement(bytes,uint256)\":{\"details\":\"Use with .rawValue() in the weiroll planner\",\"params\":{\"index\":\"The index of the string or bytes to be extracted\",\"tuple\":\"The bytes encoded tuple\"}},\"extractElement(bytes,uint256)\":{\"details\":\"Use with .rawValue() in the weiroll planner\",\"params\":{\"index\":\"The index of the value to be extracted\",\"tuple\":\"The bytes encoded tuple\"}},\"extractTuple(bytes,uint256,bool[])\":{\"details\":\"Use with .rawValue() in the weiroll planner\",\"params\":{\"index\":\"The index of the tuple to be extracted\",\"isDynamicTypeFormat\":\"Boolean to define whether the child tuple is dynamically sized. If the child tuple contains bytes or string variables, set to \\\"true\\\"\",\"tuple\":\"The bytes encoded parent tuple\"}},\"extractTupleArray(bytes,uint256,bool[])\":{\"details\":\"Use with .rawValue() in the weiroll planner\",\"params\":{\"index\":\"The index of the tuple array to be extracted\",\"isDynamicTypeFormat\":\"Boolean to define whether the tuples in the array are dynamically sized. If the array tuple contains bytes or string variables, set to \\\"true\\\"\",\"tuple\":\"The bytes encoded tuple\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"extractArray(bytes,uint256)\":{\"notice\":\"Extract a bytes encoded static array from a tuple\"},\"extractDynamicArray(bytes,uint256)\":{\"notice\":\"Extract a bytes encoded dynamic array from a tuple\"},\"extractDynamicElement(bytes,uint256)\":{\"notice\":\"Extract a bytes encoded dynamic type from a tuple\"},\"extractElement(bytes,uint256)\":{\"notice\":\"Extract a bytes32 encoded static type from a tuple\"},\"extractTuple(bytes,uint256,bool[])\":{\"notice\":\"Extract a bytes encoded tuple from another tuple\"},\"extractTupleArray(bytes,uint256,bool[])\":{\"notice\":\"Extract a bytes encoded array of tuples from a tuple\"}},\"notice\":\"Helper contract to extract a variety of types from a tuple within the context of a weiroll script\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/TupleHelpers.sol\":\"TupleHelpers\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100000000},\"remappings\":[]},\"sources\":{\"contracts/TupleHelpers.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.16;\\n\\n/**\\n * @notice Helper contract to extract a variety of types from a tuple within the context of a weiroll script\\n */\\ncontract TupleHelpers {\\n    /**\\n     * @notice Extract a bytes32 encoded static type from a tuple\\n     * @dev Use with .rawValue() in the weiroll planner\\n     * @param tuple The bytes encoded tuple\\n     * @param index The index of the value to be extracted\\n     */\\n    function extractElement(bytes memory tuple, uint256 index) public pure returns (bytes32) {\\n        assembly {\\n            // let offset := mul(add(index, 1), 32)\\n            // return(add(tuple, offset), 32)\\n            return(add(tuple, mul(add(index, 1), 32)), 32)\\n        }\\n    }\\n\\n    /**\\n     * @notice Extract a bytes encoded dynamic type from a tuple\\n     * @dev Use with .rawValue() in the weiroll planner\\n     * @param tuple The bytes encoded tuple\\n     * @param index The index of the string or bytes to be extracted\\n     */\\n    function extractDynamicElement(bytes memory tuple, uint256 index) public pure returns (bytes32) {\\n        assembly {\\n            let offset := add(mload(add(tuple, mul(add(index, 1), 32))), 32)\\n            let length := mload(add(tuple, offset))\\n            if gt(mod(length, 32), 0) {\\n                length := mul(add(div(length, 32), 1), 32)\\n            }\\n            return(add(tuple, add(offset, 32)), length)\\n        }\\n    }\\n\\n    /**\\n     * @notice Extract a bytes encoded tuple from another tuple\\n     * @dev Use with .rawValue() in the weiroll planner\\n     * @param tuple The bytes encoded parent tuple\\n     * @param index The index of the tuple to be extracted\\n     * @param isDynamicTypeFormat Boolean to define whether the child tuple is dynamically sized. If the child tuple contains bytes or string variables, set to \\\"true\\\"\\n     */\\n    function extractTuple(\\n        bytes memory tuple,\\n        uint256 index,\\n        bool[] memory isDynamicTypeFormat\\n    ) public pure returns (bytes32) {\\n        uint256 offset;\\n        uint256 length;\\n        assembly {\\n            offset := add(mload(add(tuple, mul(add(index, 1), 32))), 32)\\n        }\\n        for (uint256 i = 0; i < isDynamicTypeFormat.length; i++) {\\n            length += 32;\\n            if (isDynamicTypeFormat[i]) {\\n                assembly {\\n                    let paramOffset := add(offset, mload(add(tuple, add(offset, mul(i, 32)))))\\n                    let paramLength := add(mload(add(tuple, paramOffset)), 32)\\n                    if gt(mod(paramLength, 32), 0) {\\n                        paramLength := mul(add(div(paramLength, 32), 1), 32)\\n                    }\\n                    length := add(length, paramLength)\\n                }\\n            }\\n        }\\n        assembly {\\n            return(add(tuple, add(mload(add(tuple, mul(add(index, 1), 32))), 32)), length)\\n        }\\n    }\\n\\n    /**\\n     * @notice Extract a bytes encoded static array from a tuple\\n     * @dev Use with .rawValue() in the weiroll planner\\n     * @param tuple The bytes encoded array\\n     * @param index The index of the array to be extracted\\n     */\\n    function extractArray(bytes memory tuple, uint256 index) public pure returns (bytes32) {\\n        assembly {\\n            // let offset := add(mload(add(tuple, mul(add(index, 1), 32))), 32)\\n            // let numberOfElements := mload(add(tuple, offset))\\n            // return(add(tuple, add(offset, 32)), mul(numberOfElements, 32))\\n            return(\\n                add(tuple, add(add(mload(add(tuple, mul(add(index, 1), 32))), 32), 32)),\\n                mul(mload(add(tuple, add(mload(add(tuple, mul(add(index, 1), 32))), 32))), 32)\\n            )\\n        }\\n    }\\n\\n    /**\\n     * @notice Extract a bytes encoded dynamic array from a tuple\\n     * @dev Use with .rawValue() in the weiroll planner\\n     * @param tuple The bytes encoded tuple\\n     * @param index The index of the dynamic array to be extracted\\n     */\\n    function extractDynamicArray(bytes memory tuple, uint256 index) public pure returns (bytes32) {\\n        uint256 numberOfElements;\\n        uint256 offset;\\n        assembly {\\n            offset := add(mload(add(tuple, mul(add(index, 1), 32))), 32)\\n            numberOfElements := mload(add(tuple, offset))\\n            //numberOfElements := mload(add(tuple, add(mload(add(tuple, mul(add(index, 1), 32))), 32)))\\n        }\\n\\n        uint256 length;\\n        for (uint256 i = 1; i <= numberOfElements; i++) {\\n            assembly {\\n                let paramOffset := add(offset, mul(add(i, 1), 32))\\n                let paramLength := mload(add(tuple, paramOffset))\\n                if gt(mod(paramLength, 32), 0) {\\n                    paramLength := mul(add(div(paramLength, 32), 1), 32)\\n                }\\n                length := add(length, paramLength)\\n                //length := add(length, mload(add(tuple, add(add(mload(add(tuple, mul(add(index, 1), 32))), 32), mul(add(i, 1), 32)))))\\n            }\\n        }\\n        assembly {\\n            // return(add(tuple, add(offset, 32)), add(length, 32))\\n            return(add(tuple, add(add(mload(add(tuple, mul(add(index, 1), 32))), 32), 32)), add(length, 32))\\n        }\\n    }\\n\\n    /**\\n     * @notice Extract a bytes encoded array of tuples from a tuple\\n     * @dev Use with .rawValue() in the weiroll planner\\n     * @param tuple The bytes encoded tuple\\n     * @param index The index of the tuple array to be extracted\\n     * @param isDynamicTypeFormat Boolean to define whether the tuples in the array are dynamically sized. If the array tuple contains bytes or string variables, set to \\\"true\\\"\\n     */\\n    function extractTupleArray(\\n        bytes memory tuple,\\n        uint256 index,\\n        bool[] memory isDynamicTypeFormat\\n    ) public pure returns (bytes32) {\\n        uint256 numberOfElements;\\n        assembly {\\n            // let offset := add(mload(add(tuple, mul(add(index, 1), 32))), 32)\\n            // numberOfElements := mload(add(tuple, offset))\\n            numberOfElements := mload(add(tuple, add(mload(add(tuple, mul(add(index, 1), 32))), 32)))\\n        }\\n        uint256 length = numberOfElements * 32;\\n        for (uint256 i = 1; i <= numberOfElements; i++) {\\n            for (uint256 j = 0; j < isDynamicTypeFormat.length; j++) {\\n                length += 32;\\n                if (isDynamicTypeFormat[j]) {\\n                    assembly {\\n                        // let tupleOffset := add(offset,mload(add(tuple, add(offset, mul(i, 32)))))\\n                        // let paramOffset := add(tupleOffset, mload(add(tuple, add(tupleOffset, mul(add(j,1), 32)))))\\n                        // let paramLength := add(mload(add(tuple, paramOffset)),32)\\n                        // length := add(length, paramLength)\\n                        length := add(\\n                            length,\\n                            add(\\n                                mload(\\n                                    add(\\n                                        tuple,\\n                                        add(\\n                                            add(\\n                                                add(mload(add(tuple, mul(add(index, 1), 32))), 32),\\n                                                mload(\\n                                                    add(\\n                                                        tuple,\\n                                                        add(\\n                                                            add(mload(add(tuple, mul(add(index, 1), 32))), 32),\\n                                                            mul(i, 32)\\n                                                        )\\n                                                    )\\n                                                )\\n                                            ),\\n                                            mload(\\n                                                add(\\n                                                    tuple,\\n                                                    add(\\n                                                        add(\\n                                                            add(mload(add(tuple, mul(add(index, 1), 32))), 32),\\n                                                            mload(\\n                                                                add(\\n                                                                    tuple,\\n                                                                    add(\\n                                                                        add(\\n                                                                            mload(add(tuple, mul(add(index, 1), 32))),\\n                                                                            32\\n                                                                        ),\\n                                                                        mul(i, 32)\\n                                                                    )\\n                                                                )\\n                                                            )\\n                                                        ),\\n                                                        mul(add(j, 1), 32)\\n                                                    )\\n                                                )\\n                                            )\\n                                        )\\n                                    )\\n                                ),\\n                                32\\n                            )\\n                        )\\n                    }\\n                }\\n            }\\n        }\\n        assembly {\\n            // return(add(tuple, add(offset,32)), length)\\n            return(add(tuple, add(add(mload(add(tuple, mul(add(index, 1), 32))), 32), 32)), length)\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x32ba4699f9ee114e034d6e503c0db0016a68474d4387f849d072e43ba77c63c3\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061068e806100206000396000f3fe608060405234801561001057600080fd5b50600436106100725760003560e01c80639bd3b227116100505780639bd3b227146100c2578063a208b031146100d5578063df6d76b5146100e857600080fd5b80632fb402541461007757806348f263021461009c5780635305afc0146100af575b600080fd5b61008a610085366004610442565b6100fb565b60405190815260200160405180910390f35b61008a6100aa366004610527565b610190565b61008a6100bd366004610527565b6101c2565b61008a6100d0366004610527565b610239565b61008a6100e3366004610442565b610247565b61008a6100f6366004610527565b61031b565b60206001830181028401516000910181805b845181101561017e5761012160208361059b565b9150848181518110610135576101356105b4565b60200260200101511561016c5760208181028401880151840188015101601f81161561016657602090819004600101025b91909101905b80610176816105e3565b91505061010d565b50806020806001880102880151018701f35b60006020806001840102840151018084015160006020820611156101b957602090819004600101025b80602083018601f35b60008060006020806001860102860151019050808501519150600080600190505b83811161022157600181016020028301870151601f81161561020a57602090819004600101025b919091019080610219816105e3565b9150506101e3565b50602081016020806020600189010289015101018701f35b600060208060018401028401f35b6000806020806001860102860151018501519050600081602061026a919061061b565b905060015b8281116103075760005b85518110156102f45761028d60208461059b565b92508581815181106102a1576102a16105b4565b6020026020010151156102e2576020600188810182028a015184830281018b01830151918401830291019081018a0182015101890181015193909301909201915b806102ec816105e3565b915050610279565b50806102ff816105e3565b91505061026f565b506001850160200286015181908701604001f35b60206001820181028301518301808201516000920290604001f35b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b604051601f82017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe016810167ffffffffffffffff811182821017156103ac576103ac610336565b604052919050565b600082601f8301126103c557600080fd5b813567ffffffffffffffff8111156103df576103df610336565b61041060207fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f84011601610365565b81815284602083860101111561042557600080fd5b816020850160208301376000918101602001919091529392505050565b60008060006060848603121561045757600080fd5b833567ffffffffffffffff8082111561046f57600080fd5b61047b878388016103b4565b94506020915081860135935060408601358181111561049957600080fd5b8601601f810188136104aa57600080fd5b8035828111156104bc576104bc610336565b8060051b92506104cd848401610365565b818152928201840192848101908a8511156104e757600080fd5b928501925b84841015610517578335925082151583146105075760008081fd5b82825292850192908501906104ec565b8096505050505050509250925092565b6000806040838503121561053a57600080fd5b823567ffffffffffffffff81111561055157600080fd5b61055d858286016103b4565b95602094909401359450505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b808201808211156105ae576105ae61056c565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82036106145761061461056c565b5060010190565b6000817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156106535761065361056c565b50029056fea26469706673582212206a74c2ed44ee098872d72f5da8d1a4de49e3da6d84c59b3aceffe5a1554dd27964736f6c63430008100033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100725760003560e01c80639bd3b227116100505780639bd3b227146100c2578063a208b031146100d5578063df6d76b5146100e857600080fd5b80632fb402541461007757806348f263021461009c5780635305afc0146100af575b600080fd5b61008a610085366004610442565b6100fb565b60405190815260200160405180910390f35b61008a6100aa366004610527565b610190565b61008a6100bd366004610527565b6101c2565b61008a6100d0366004610527565b610239565b61008a6100e3366004610442565b610247565b61008a6100f6366004610527565b61031b565b60206001830181028401516000910181805b845181101561017e5761012160208361059b565b9150848181518110610135576101356105b4565b60200260200101511561016c5760208181028401880151840188015101601f81161561016657602090819004600101025b91909101905b80610176816105e3565b91505061010d565b50806020806001880102880151018701f35b60006020806001840102840151018084015160006020820611156101b957602090819004600101025b80602083018601f35b60008060006020806001860102860151019050808501519150600080600190505b83811161022157600181016020028301870151601f81161561020a57602090819004600101025b919091019080610219816105e3565b9150506101e3565b50602081016020806020600189010289015101018701f35b600060208060018401028401f35b6000806020806001860102860151018501519050600081602061026a919061061b565b905060015b8281116103075760005b85518110156102f45761028d60208461059b565b92508581815181106102a1576102a16105b4565b6020026020010151156102e2576020600188810182028a015184830281018b01830151918401830291019081018a0182015101890181015193909301909201915b806102ec816105e3565b915050610279565b50806102ff816105e3565b91505061026f565b506001850160200286015181908701604001f35b60206001820181028301518301808201516000920290604001f35b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b604051601f82017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe016810167ffffffffffffffff811182821017156103ac576103ac610336565b604052919050565b600082601f8301126103c557600080fd5b813567ffffffffffffffff8111156103df576103df610336565b61041060207fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f84011601610365565b81815284602083860101111561042557600080fd5b816020850160208301376000918101602001919091529392505050565b60008060006060848603121561045757600080fd5b833567ffffffffffffffff8082111561046f57600080fd5b61047b878388016103b4565b94506020915081860135935060408601358181111561049957600080fd5b8601601f810188136104aa57600080fd5b8035828111156104bc576104bc610336565b8060051b92506104cd848401610365565b818152928201840192848101908a8511156104e757600080fd5b928501925b84841015610517578335925082151583146105075760008081fd5b82825292850192908501906104ec565b8096505050505050509250925092565b6000806040838503121561053a57600080fd5b823567ffffffffffffffff81111561055157600080fd5b61055d858286016103b4565b95602094909401359450505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b808201808211156105ae576105ae61056c565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82036106145761061461056c565b5060010190565b6000817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156106535761065361056c565b50029056fea26469706673582212206a74c2ed44ee098872d72f5da8d1a4de49e3da6d84c59b3aceffe5a1554dd27964736f6c63430008100033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "extractArray(bytes,uint256)": {
+        "details": "Use with .rawValue() in the weiroll planner",
+        "params": {
+          "index": "The index of the array to be extracted",
+          "tuple": "The bytes encoded array"
+        }
+      },
+      "extractDynamicArray(bytes,uint256)": {
+        "details": "Use with .rawValue() in the weiroll planner",
+        "params": {
+          "index": "The index of the dynamic array to be extracted",
+          "tuple": "The bytes encoded tuple"
+        }
+      },
+      "extractDynamicElement(bytes,uint256)": {
+        "details": "Use with .rawValue() in the weiroll planner",
+        "params": {
+          "index": "The index of the string or bytes to be extracted",
+          "tuple": "The bytes encoded tuple"
+        }
+      },
+      "extractElement(bytes,uint256)": {
+        "details": "Use with .rawValue() in the weiroll planner",
+        "params": {
+          "index": "The index of the value to be extracted",
+          "tuple": "The bytes encoded tuple"
+        }
+      },
+      "extractTuple(bytes,uint256,bool[])": {
+        "details": "Use with .rawValue() in the weiroll planner",
+        "params": {
+          "index": "The index of the tuple to be extracted",
+          "isDynamicTypeFormat": "Boolean to define whether the child tuple is dynamically sized. If the child tuple contains bytes or string variables, set to \"true\"",
+          "tuple": "The bytes encoded parent tuple"
+        }
+      },
+      "extractTupleArray(bytes,uint256,bool[])": {
+        "details": "Use with .rawValue() in the weiroll planner",
+        "params": {
+          "index": "The index of the tuple array to be extracted",
+          "isDynamicTypeFormat": "Boolean to define whether the tuples in the array are dynamically sized. If the array tuple contains bytes or string variables, set to \"true\"",
+          "tuple": "The bytes encoded tuple"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "extractArray(bytes,uint256)": {
+        "notice": "Extract a bytes encoded static array from a tuple"
+      },
+      "extractDynamicArray(bytes,uint256)": {
+        "notice": "Extract a bytes encoded dynamic array from a tuple"
+      },
+      "extractDynamicElement(bytes,uint256)": {
+        "notice": "Extract a bytes encoded dynamic type from a tuple"
+      },
+      "extractElement(bytes,uint256)": {
+        "notice": "Extract a bytes32 encoded static type from a tuple"
+      },
+      "extractTuple(bytes,uint256,bool[])": {
+        "notice": "Extract a bytes encoded tuple from another tuple"
+      },
+      "extractTupleArray(bytes,uint256,bool[])": {
+        "notice": "Extract a bytes encoded array of tuples from a tuple"
+      }
+    },
+    "notice": "Helper contract to extract a variety of types from a tuple within the context of a weiroll script",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
