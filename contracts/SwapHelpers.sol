@@ -9,7 +9,7 @@ import { SafeERC20, IERC20 } from "@openzeppelin/contracts/token/ERC20/utils/Saf
 contract SwapHelpers {
     using SafeERC20 for IERC20;
 
-    uint256 public constant VERSION = 2;
+    uint256 public constant VERSION = 3;
     IERC20 private constant _ETH = IERC20(0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE);
 
     error IncorrectValue(uint256 expected, uint256 actual);
@@ -22,9 +22,9 @@ contract SwapHelpers {
         uint256 amountIn,
         address receiver,
         bytes memory data,        
-        uint256 index
+        uint256[] memory pointers
     ) external payable returns (bytes memory) {
-        if (index != type(uint256).max) insertAmount(data, index, amountIn);
+        if (pointers.length != 0) insertAmount(data, pointers, amountIn);
         if (tokenIn == _ETH) {
             if (msg.value != amountIn) revert IncorrectValue(amountIn, msg.value);
         } else {
@@ -53,11 +53,15 @@ contract SwapHelpers {
 
     function insertAmount(
         bytes memory data,
-        uint256 index,
+        uint256[] memory pointers,
         uint256 amount
     ) public pure returns (bytes memory) {
+        uint256 length = pointers.length;
         assembly {
-            mstore(add(data, add(36, mul(index, 32))), amount)
+            for { let i := 0 } lt( i, length ) { i := add(i, 1) } {
+               let pointer := mload(add(pointers, mul(32, add(i, 1))))
+               mstore(add(data, add(36, pointer)), amount)
+            }
         }
         return data;
     }
