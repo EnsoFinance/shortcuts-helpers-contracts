@@ -1128,7 +1128,7 @@
           ]
         },
         "SwapHelpers": {
-          "address": "0xbF96e1DB7b9C72E217Ba6239647b52dF1BEf58EB",
+          "address": "0x9857A929f9317c593739968F00117204F536dFD6",
           "abi": [
             {
               "inputs": [
@@ -1216,9 +1216,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 },
                 {
                   "internalType": "uint256",
@@ -1270,9 +1270,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 }
               ],
               "name": "swap",
@@ -2520,7 +2520,7 @@
           ]
         },
         "SwapHelpers": {
-          "address": "0xbF96e1DB7b9C72E217Ba6239647b52dF1BEf58EB",
+          "address": "0x9857A929f9317c593739968F00117204F536dFD6",
           "abi": [
             {
               "inputs": [
@@ -2608,9 +2608,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 },
                 {
                   "internalType": "uint256",
@@ -2662,9 +2662,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 }
               ],
               "name": "swap",
@@ -3912,7 +3912,7 @@
           ]
         },
         "SwapHelpers": {
-          "address": "0xbF96e1DB7b9C72E217Ba6239647b52dF1BEf58EB",
+          "address": "0x9857A929f9317c593739968F00117204F536dFD6",
           "abi": [
             {
               "inputs": [
@@ -4000,9 +4000,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 },
                 {
                   "internalType": "uint256",
@@ -4054,9 +4054,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 }
               ],
               "name": "swap",
@@ -5303,6 +5303,171 @@
             }
           ]
         },
+        "SwapHelpers": {
+          "address": "0x9857A929f9317c593739968F00117204F536dFD6",
+          "abi": [
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "target",
+                  "type": "address"
+                }
+              ],
+              "name": "AddressEmptyCode",
+              "type": "error"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "account",
+                  "type": "address"
+                }
+              ],
+              "name": "AddressInsufficientBalance",
+              "type": "error"
+            },
+            {
+              "inputs": [],
+              "name": "FailedInnerCall",
+              "type": "error"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "expected",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "actual",
+                  "type": "uint256"
+                }
+              ],
+              "name": "IncorrectValue",
+              "type": "error"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                }
+              ],
+              "name": "SafeERC20FailedOperation",
+              "type": "error"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "receiver",
+                  "type": "address"
+                }
+              ],
+              "name": "TransferFailed",
+              "type": "error"
+            },
+            {
+              "inputs": [],
+              "name": "VERSION",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                }
+              ],
+              "name": "insertAmount",
+              "outputs": [
+                {
+                  "internalType": "bytes",
+                  "name": "",
+                  "type": "bytes"
+                }
+              ],
+              "stateMutability": "pure",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "primary",
+                  "type": "address"
+                },
+                {
+                  "internalType": "contract IERC20",
+                  "name": "tokenIn",
+                  "type": "address"
+                },
+                {
+                  "internalType": "contract IERC20",
+                  "name": "tokenOut",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amountIn",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "receiver",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
+                }
+              ],
+              "name": "swap",
+              "outputs": [
+                {
+                  "internalType": "bytes",
+                  "name": "",
+                  "type": "bytes"
+                }
+              ],
+              "stateMutability": "payable",
+              "type": "function"
+            },
+            {
+              "stateMutability": "payable",
+              "type": "receive"
+            }
+          ]
+        },
         "TupleHelpers": {
           "address": "0x6675a323dEDb77822FCf39eAa9D682F6Abe72555",
           "abi": [
@@ -6531,7 +6696,7 @@
           ]
         },
         "SwapHelpers": {
-          "address": "0xbF96e1DB7b9C72E217Ba6239647b52dF1BEf58EB",
+          "address": "0x9857A929f9317c593739968F00117204F536dFD6",
           "abi": [
             {
               "inputs": [
@@ -6619,9 +6784,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 },
                 {
                   "internalType": "uint256",
@@ -6673,9 +6838,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 }
               ],
               "name": "swap",
@@ -7923,7 +8088,7 @@
           ]
         },
         "SwapHelpers": {
-          "address": "0xbF96e1DB7b9C72E217Ba6239647b52dF1BEf58EB",
+          "address": "0x9857A929f9317c593739968F00117204F536dFD6",
           "abi": [
             {
               "inputs": [
@@ -8011,9 +8176,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 },
                 {
                   "internalType": "uint256",
@@ -8065,9 +8230,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 }
               ],
               "name": "swap",
@@ -9315,7 +9480,7 @@
           ]
         },
         "SwapHelpers": {
-          "address": "0xbF96e1DB7b9C72E217Ba6239647b52dF1BEf58EB",
+          "address": "0x9857A929f9317c593739968F00117204F536dFD6",
           "abi": [
             {
               "inputs": [
@@ -9403,9 +9568,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 },
                 {
                   "internalType": "uint256",
@@ -9457,9 +9622,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 }
               ],
               "name": "swap",
@@ -10707,7 +10872,7 @@
           ]
         },
         "SwapHelpers": {
-          "address": "0xbF96e1DB7b9C72E217Ba6239647b52dF1BEf58EB",
+          "address": "0x9857A929f9317c593739968F00117204F536dFD6",
           "abi": [
             {
               "inputs": [
@@ -10795,9 +10960,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 },
                 {
                   "internalType": "uint256",
@@ -10849,9 +11014,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 }
               ],
               "name": "swap",
@@ -12099,7 +12264,7 @@
           ]
         },
         "SwapHelpers": {
-          "address": "0xbF96e1DB7b9C72E217Ba6239647b52dF1BEf58EB",
+          "address": "0x9857A929f9317c593739968F00117204F536dFD6",
           "abi": [
             {
               "inputs": [
@@ -12187,9 +12352,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 },
                 {
                   "internalType": "uint256",
@@ -12241,9 +12406,9 @@
                   "type": "bytes"
                 },
                 {
-                  "internalType": "uint256",
-                  "name": "index",
-                  "type": "uint256"
+                  "internalType": "uint256[]",
+                  "name": "pointers",
+                  "type": "uint256[]"
                 }
               ],
               "name": "swap",
