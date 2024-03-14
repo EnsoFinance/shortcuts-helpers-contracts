@@ -67,7 +67,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   });
 
   await deployDecimalHelpers();
-
+  /*
   const {deploy: deployBalancerHelpers} = await deterministic('BalancerHelpers', {
     from: deployer,
     args: [],
@@ -77,6 +77,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   });
 
   await deployBalancerHelpers();
+  */
   
   const {deploy: deploySwapHelpers} = await deterministic('SwapHelpers', {
     from: deployer,
