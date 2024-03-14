@@ -108,6 +108,11 @@ const config: HardhatUserConfig = {
       url: nodeUrl('linea'),
       accounts: accounts('linea'),
       saveDeployments: true,
+    },
+    artio: {
+      url: nodeUrl('artio'),
+      accounts: accounts('artio'),
+      saveDeployments: true,
     }
   }),
   paths: {

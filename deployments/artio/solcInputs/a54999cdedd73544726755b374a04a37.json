@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/DecimalHelpers.sol": {
+      "content": "pragma solidity ^0.8.16;\n\n\ncontract DecimalHelpers {\n    uint256 public constant VERSION = 1;\n\n    function decimalString(uint256 number, uint8 decimals, bool isPercent) public pure returns(string memory){\n        if(number == 0){\n            return isPercent ? \"0%\" : \"0\";\n        }\n        \n        uint8 percentBufferOffset = isPercent ? 1 : 0;\n        uint256 tenPowDecimals = 10 ** decimals;\n\n        uint256 temp = number;\n        uint8 digits;\n        uint8 numSigfigs;\n        while (temp != 0) {\n            if (numSigfigs > 0) {\n                // count all digits preceding least significant figure\n                numSigfigs++;\n            } else if (temp % 10 != 0) {\n                numSigfigs++;\n            }\n            digits++;\n            temp /= 10;\n        }\n\n        DecimalStringParams memory params;\n        params.isPercent = isPercent;\n        if((digits - numSigfigs) >= decimals) {\n            // no decimals, ensure we preserve all trailing zeros\n            params.sigfigs = number / tenPowDecimals;\n            params.sigfigIndex = digits - decimals;\n            params.bufferLength = params.sigfigIndex + percentBufferOffset;\n        } else {\n            // chop all trailing zeros for numbers with decimals\n            params.sigfigs = number / (10 ** (digits - numSigfigs));\n            if(tenPowDecimals > number){\n                // number is less than one\n                // in this case, there may be leading zeros after the decimal place \n                // that need to be added\n\n                // offset leading zeros by two to account for leading '0.'\n                params.zerosStartIndex = 2;\n                params.zerosEndIndex = decimals - digits + 2;\n                params.sigfigIndex = numSigfigs + params.zerosEndIndex;\n                params.bufferLength = params.sigfigIndex + percentBufferOffset;\n                params.isLessThanOne = true;\n            } else {\n                // In this case, there are digits before and\n                // after the decimal place\n                params.sigfigIndex = numSigfigs + 1;\n                params.decimalIndex = digits - decimals + 1;\n            }\n        }\n        params.bufferLength = params.sigfigIndex + percentBufferOffset;\n        return generateDecimalString(params);\n    }\n\n    // With modifications, From https://github.com/Uniswap/uniswap-v3-periphery/blob/main/contracts/libraries/NFTDescriptor.sol#L189-L231\n\n    struct DecimalStringParams {\n        // significant figures of decimal\n        uint256 sigfigs;\n        // length of decimal string\n        uint8 bufferLength;\n        // ending index for significant figures (funtion works backwards when copying sigfigs)\n        uint8 sigfigIndex;\n        // index of decimal place (0 if no decimal)\n        uint8 decimalIndex;\n        // start index for trailing/leading 0's for very small/large numbers\n        uint8 zerosStartIndex;\n        // end index for trailing/leading 0's for very small/large numbers\n        uint8 zerosEndIndex;\n        // true if decimal number is less than one\n        bool isLessThanOne;\n        // true if string should include \"%\"\n        bool isPercent;\n    }\n\n    function generateDecimalString(DecimalStringParams memory params) private pure returns (string memory) {\n        bytes memory buffer = new bytes(params.bufferLength);\n        if (params.isPercent) {\n            buffer[buffer.length - 1] = '%';\n        }\n        if (params.isLessThanOne) {\n            buffer[0] = '0';\n            buffer[1] = '.';\n        }\n\n        // add leading/trailing 0's\n        for (uint256 zerosCursor = params.zerosStartIndex; zerosCursor < params.zerosEndIndex; zerosCursor++) {\n            buffer[zerosCursor] = bytes1(uint8(48));\n        }\n        // add sigfigs\n        while (params.sigfigs > 0) {\n            if (params.decimalIndex > 0 && params.sigfigIndex == params.decimalIndex) {\n                buffer[--params.sigfigIndex] = '.';\n            }\n            buffer[--params.sigfigIndex] = bytes1(uint8(uint256(48) + (params.sigfigs % 10)));\n            params.sigfigs /= 10;\n        }\n        return string(buffer);\n    }\n}"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 100000000
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
