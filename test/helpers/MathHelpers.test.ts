@@ -133,5 +133,12 @@ describe('EnsoHelpers', async () => {
 
       expect(await mathHelpers.conditional(condition, method, a, b)).to.eq(expected);
     });
+
+    it('sqrt', async () => {
+      const a = BigNumber.from(4);
+      const expected = BigNumber.from(ethers.constants.Two);
+
+      expect(await mathHelpers.sqrt(a)).to.eq(expected);
+    });
   });
 });
