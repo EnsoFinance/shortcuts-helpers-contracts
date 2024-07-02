@@ -7,4 +7,7 @@ echo "Deploy to all networks" \
     && yarn deploy arbitrum \
     && yarn deploy optimism \
     && yarn deploy bsc \
-    && yarn deploy gnosis
+    && yarn deploy gnosis \
+    && yarn deploy artio \
+    && yarn deploy base \
+    && yarn deploy linea

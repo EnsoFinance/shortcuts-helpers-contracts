@@ -9,7 +9,7 @@ import { SafeERC20, IERC20 } from "@openzeppelin/contracts/token/ERC20/utils/Saf
 contract SwapHelpers {
     using SafeERC20 for IERC20;
 
-    uint256 public constant VERSION = 3;
+    uint256 public constant VERSION = 4;
     IERC20 private constant _ETH = IERC20(0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE);
 
     error IncorrectValue(uint256 expected, uint256 actual);
@@ -30,11 +30,7 @@ contract SwapHelpers {
         } else {
             if (msg.value != 0) revert IncorrectValue(0, msg.value);
             tokenIn.safeTransferFrom(msg.sender, address(this), amountIn);
-            if (tokenIn.allowance(address(this), primary) != 0) {
-                // Reset approval just in case
-                tokenIn.approve(primary, 0);
-            }
-            tokenIn.approve(primary, amountIn);
+            tokenIn.forceApprove(primary, amountIn);
         }
         (bool success, bytes memory response) = primary.call{ value: msg.value }(data);
         if (!success) {
