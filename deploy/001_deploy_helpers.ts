@@ -89,28 +89,8 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   await deploySwapHelpers();
 
-  const {deploy: deployReserveHelpers} = await deterministic('ReserveHelpers', {
-    from: deployer,
-    args: [],
-    log: true,
-    autoMine: true,
-    skipIfAlreadyDeployed: true,
-  });
-
-  await deployReserveHelpers();
-
   /*
   if (network.name === 'mainnet') {
-    const {deploy: deployReserveHelpers} = await deterministic('ReserveHelpers', {
-      from: deployer,
-      args: [],
-      log: true,
-      autoMine: true,
-      skipIfAlreadyDeployed: true,
-    });
-
-    await deployReserveHelpers();
-    
     const {deploy: deploySommelierHelpers} = await deterministic('SommelierHelpers', {
       from: deployer,
       args: [],

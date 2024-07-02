@@ -1,0 +1,36 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/ReserveHelpers.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.16;\n\nenum RoundingMode {\n    FLOOR,\n    ROUND,\n    CEIL\n}\n\ninterface IAssetRegistry {\n    function refresh() external;\n}\n\ninterface IBasketHandler {\n    function quote(uint192 amount, RoundingMode rounding) external view returns (address[] memory erc20s, uint256[] memory quantities);\n}\n\ninterface IMain {\n    function assetRegistry() external view returns (IAssetRegistry);\n    function basketHandler() external view returns (IBasketHandler);\n    function frozen() external view returns (bool);\n}\n\ninterface IRToken {\n    function main() external view returns (IMain);\n    function totalSupply() external view returns (uint256);\n    function basketsNeeded() external view returns (uint256);\n}\n\ncontract ReserveHelpers {\n    uint64 constant FIX_SCALE = 1e18;\n    uint192 constant FIX_ONE = FIX_SCALE;\n    uint192 constant FIX_MAX = type(uint192).max;\n\n    error UIntOutOfBounds();\n\n    function maxIssuableByAmounts(IRToken rToken, uint256[] memory amounts)\n        public\n        view\n        returns (uint256)\n    {\n        /*\n        IMain main = rToken.main();\n        \n\n        require(!main.frozen(), \"frozen\");\n\n        // Poke Main\n        main.assetRegistry().refresh();\n\n        // Get basket ERC20s\n        IBasketHandler bh = main.basketHandler();\n        (address[] memory erc20s, uint256[] memory quantities) = bh.quote(FIX_ONE, RoundingMode.CEIL);\n\n        // Compute how many baskets we can mint with the collateral amounts\n        uint192 baskets = type(uint192).max;\n        for (uint256 i = 0; i < erc20s.length; ++i) {\n            // {BU} = {tok} / {tok/BU}\n            uint192 inBUs = divuu(amounts[i], quantities[i]); // FLOOR\n            baskets = fixMin(baskets, inBUs);\n        }\n\n        // Convert baskets to RToken\n        // {qRTok} = {qRTok/BU} * {qRTok} / {BU}\n        uint256 totalSupply = rToken.totalSupply();\n        if (totalSupply == 0) return baskets;\n        return muluDivu(baskets, rToken.totalSupply(), rToken.basketsNeeded(), RoundingMode.FLOOR);\n        */\n       return uint256(1);\n    }\n\n    /// Explicitly convert a uint256 to a uint192. Revert if the input is out of bounds.\n    function safeWrap(uint256 x) public pure returns (uint192) {\n        if (FIX_MAX < x) revert UIntOutOfBounds();\n        return uint192(x);\n    }\n\n    /// Divide a uint by a uint, yielding a  uint192\n    /// @return x / y\n    // as-ints: x * 1e18 / y\n    function divuu(uint256 x, uint256 y) public pure returns (uint192) {\n        return safeWrap(mulDiv256(FIX_SCALE, x, y));\n    }\n\n    /// Compute x * y / z, avoiding intermediate overflow\n    /// @dev Only use if you need to avoid overflow; costlier than x * y / z\n    /// @return x * y / z\n    // as-ints: x * y / z\n    function muluDivu(\n        uint192 x,\n        uint256 y,\n        uint256 z,\n        RoundingMode rounding\n    ) internal pure returns (uint192) {\n        return safeWrap(mulDiv256(x, y, z, rounding));\n    }\n\n    /// @return min(x,y)\n    // as-ints: min(x,y)\n    function fixMin(uint192 x, uint192 y) public pure returns (uint192) {\n        return x < y ? x : y;\n    }\n\n    /// Return (x*y/z), avoiding intermediate overflow.\n    //  Adapted from sources:\n    //    https://medium.com/coinmonks/4db014e080b1, https://medium.com/wicketh/afa55870a65\n    //    and quite a few of the other excellent \"Mathemagic\" posts from https://medium.com/wicketh\n    /// @dev Only use if you need to avoid overflow; costlier than x * y / z\n    /// @return result x * y / z\n    function mulDiv256(\n        uint256 x,\n        uint256 y,\n        uint256 z\n    ) public pure returns (uint256 result) {\n        unchecked {\n            (uint256 hi, uint256 lo) = fullMul(x, y);\n            if (hi >= z) revert UIntOutOfBounds();\n            uint256 mm = mulmod(x, y, z);\n            if (mm > lo) hi -= 1;\n            lo -= mm;\n            uint256 pow2 = z & (0 - z);\n            z /= pow2;\n            lo /= pow2;\n            lo += hi * ((0 - pow2) / pow2 + 1);\n            uint256 r = 1;\n            r *= 2 - z * r;\n            r *= 2 - z * r;\n            r *= 2 - z * r;\n            r *= 2 - z * r;\n            r *= 2 - z * r;\n            r *= 2 - z * r;\n            r *= 2 - z * r;\n            r *= 2 - z * r;\n            result = lo * r;\n        }\n    }\n\n    /// Return (x*y/z), avoiding intermediate overflow.\n    /// @dev Only use if you need to avoid overflow; costlier than x * y / z\n    /// @return x * y / z\n    function mulDiv256(\n        uint256 x,\n        uint256 y,\n        uint256 z,\n        RoundingMode rounding\n    ) public pure returns (uint256) {\n        uint256 result = mulDiv256(x, y, z);\n        if (rounding == RoundingMode.FLOOR) return result;\n\n        uint256 mm = mulmod(x, y, z);\n        if (rounding == RoundingMode.CEIL) {\n            if (mm > 0) result += 1;\n        } else {\n            if (mm > ((z - 1) / 2)) result += 1; // z should be z-1\n        }\n        return result;\n    }\n\n    /// Return (x*y) as a \"virtual uint512\" (lo, hi), representing (hi*2**256 + lo)\n    ///   Adapted from sources:\n    ///   https://medium.com/wicketh/27650fec525d, https://medium.com/coinmonks/4db014e080b1\n    /// @dev Intended to be internal to this library\n    /// @return hi (hi, lo) satisfies  hi*(2**256) + lo == x * y\n    /// @return lo (paired with `hi`)\n    function fullMul(uint256 x, uint256 y) public pure returns (uint256 hi, uint256 lo) {\n        unchecked {\n            uint256 mm = mulmod(x, y, uint256(0) - uint256(1));\n            lo = x * y;\n            hi = mm - lo;\n            if (mm < lo) hi -= 1;\n        }\n    }\n}\n    "
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 100000000
+    },
+    "evmVersion": "paris",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
