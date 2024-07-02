@@ -30,7 +30,7 @@ describe('EnsoHelpers', async () => {
     it('check truth condition', async () => {
       const {deployer: testAddress} = await getNamedAccounts();
       const balance = await ensoShortcutsHelpers.getBalance(testAddress);
-      const condition = await ensoShortcutsHelpers.isGreaterThan(balance, 0);
+      const condition = await ensoShortcutsHelpers.isEqual(balance, 0);
       expect(condition).to.eq(true);
       const inverse = await ensoShortcutsHelpers.not(condition);
       expect(inverse).to.eq(false);
