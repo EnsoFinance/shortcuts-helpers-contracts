@@ -78,17 +78,15 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   await deploySwapHelpers();
 
-  if (network.name === 'bsc') {
-    const {deploy: deployERC20Helpers} = await deterministic('ERC20Helpers', {
-      from: deployer,
-      args: [],
-      log: true,
-      autoMine: true,
-      skipIfAlreadyDeployed: true,
-    });
-  
-    await deployERC20Helpers();
-  }
+  const {deploy: deployERC20Helpers} = await deterministic('ERC20Helpers', {
+    from: deployer,
+    args: [],
+    log: true,
+    autoMine: true,
+    skipIfAlreadyDeployed: true,
+  });
+
+  await deployERC20Helpers();
   
   /*
   const {deploy: deployBalancerHelpers} = await deterministic('BalancerHelpers', {

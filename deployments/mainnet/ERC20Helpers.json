@@ -1,0 +1,78 @@
+{
+  "address": "0xd308a27350D8EAe08ae047B72e54e6861686627d",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "VERSION",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x0dc3efb09a1194f9328fc706be7cf14fb2b2fdd728e08228f658f2f7f0c4c905",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0x826e0BB2276271eFdF2a500597f37b94f6c153bA",
+    "contractAddress": null,
+    "transactionIndex": 55,
+    "gasUsed": "146706",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x379ac5eefe981e505592cf08db4ebc7171222eb50a557d4ba53ffe5c58643fd8",
+    "transactionHash": "0x0dc3efb09a1194f9328fc706be7cf14fb2b2fdd728e08228f658f2f7f0c4c905",
+    "logs": [],
+    "blockNumber": 20486464,
+    "cumulativeGasUsed": "8763894",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "49dd0b13ff62ea971d4fab51a7b1277b",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"VERSION\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/ERC20Helpers.sol\":\"ERC20Helpers\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100000000},\"remappings\":[]},\"sources\":{\"contracts/ERC20Helpers.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.16;\\n\\ninterface IERC20 {\\n    function balanceOf(address) external view returns (uint256);\\n}\\n\\ncontract ERC20Helpers {\\n    uint256 public constant VERSION = 1;\\n\\n    // This dumb function is for those ERC20s that return bytes with incorrect length for their balanceOf function\\n    function balanceOf(IERC20 token, address owner) external view returns (uint256 balance) {\\n       balance = token.balanceOf(owner);\\n    }\\n}\\n\",\"keccak256\":\"0x8fbde494837690908d2ccc1c29a65ae68627073abcb53bc3b246b132bfd04ef8\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101b0806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063f7888aec1461003b578063ffa1ad7414610060575b600080fd5b61004e610049366004610128565b610068565b60405190815260200160405180910390f35b61004e600181565b6040517f70a0823100000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff8281166004830152600091908416906370a0823190602401602060405180830381865afa1580156100d8573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100fc9190610161565b9392505050565b73ffffffffffffffffffffffffffffffffffffffff8116811461012557600080fd5b50565b6000806040838503121561013b57600080fd5b823561014681610103565b9150602083013561015681610103565b809150509250929050565b60006020828403121561017357600080fd5b505191905056fea264697066735822122075ee1bf8617015d23a9ccbe82f8287ec3aa828424ff747720832762187d6901764736f6c63430008170033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063f7888aec1461003b578063ffa1ad7414610060575b600080fd5b61004e610049366004610128565b610068565b60405190815260200160405180910390f35b61004e600181565b6040517f70a0823100000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff8281166004830152600091908416906370a0823190602401602060405180830381865afa1580156100d8573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100fc9190610161565b9392505050565b73ffffffffffffffffffffffffffffffffffffffff8116811461012557600080fd5b50565b6000806040838503121561013b57600080fd5b823561014681610103565b9150602083013561015681610103565b809150509250929050565b60006020828403121561017357600080fd5b505191905056fea264697066735822122075ee1bf8617015d23a9ccbe82f8287ec3aa828424ff747720832762187d6901764736f6c63430008170033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

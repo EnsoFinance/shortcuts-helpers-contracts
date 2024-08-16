@@ -1638,6 +1638,48 @@
               "type": "function"
             }
           ]
+        },
+        "ERC20Helpers": {
+          "address": "0xd308a27350D8EAe08ae047B72e54e6861686627d",
+          "abi": [
+            {
+              "inputs": [],
+              "name": "VERSION",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "contract IERC20",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "owner",
+                  "type": "address"
+                }
+              ],
+              "name": "balanceOf",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "balance",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            }
+          ]
         }
       }
     }
@@ -4428,54 +4470,6 @@
   ],
   "56": [
     {
-      "name": "localhost",
-      "chainId": "56",
-      "contracts": {
-        "ERC20Helpers": {
-          "address": "0xcF5Bab7aCf0EA6Bb8C5Ccc3C231BA64039b380CD",
-          "abi": [
-            {
-              "inputs": [],
-              "name": "VERSION",
-              "outputs": [
-                {
-                  "internalType": "uint256",
-                  "name": "",
-                  "type": "uint256"
-                }
-              ],
-              "stateMutability": "view",
-              "type": "function"
-            },
-            {
-              "inputs": [
-                {
-                  "internalType": "address",
-                  "name": "token",
-                  "type": "address"
-                },
-                {
-                  "internalType": "address",
-                  "name": "owner",
-                  "type": "address"
-                }
-              ],
-              "name": "balanceOf",
-              "outputs": [
-                {
-                  "internalType": "uint256",
-                  "name": "balance",
-                  "type": "uint256"
-                }
-              ],
-              "stateMutability": "view",
-              "type": "function"
-            }
-          ]
-        }
-      }
-    },
-    {
       "name": "bsc",
       "chainId": "56",
       "contracts": {
@@ -4598,6 +4592,48 @@
                 }
               ],
               "stateMutability": "pure",
+              "type": "function"
+            }
+          ]
+        },
+        "ERC20Helpers": {
+          "address": "0xd308a27350D8EAe08ae047B72e54e6861686627d",
+          "abi": [
+            {
+              "inputs": [],
+              "name": "VERSION",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "contract IERC20",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "owner",
+                  "type": "address"
+                }
+              ],
+              "name": "balanceOf",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "balance",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
               "type": "function"
             }
           ]
@@ -5862,9 +5898,15 @@
               "type": "function"
             }
           ]
-        },
+        }
+      }
+    },
+    {
+      "name": "localhost",
+      "chainId": "56",
+      "contracts": {
         "ERC20Helpers": {
-          "address": "0xd308a27350D8EAe08ae047B72e54e6861686627d",
+          "address": "0xcF5Bab7aCf0EA6Bb8C5Ccc3C231BA64039b380CD",
           "abi": [
             {
               "inputs": [],
@@ -5882,7 +5924,7 @@
             {
               "inputs": [
                 {
-                  "internalType": "contract IERC20",
+                  "internalType": "address",
                   "name": "token",
                   "type": "address"
                 },
